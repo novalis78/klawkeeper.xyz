@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "staticRoutes": [],
+  "dynamicRoutes": [],
+  "dataRoutes": [],
+  "entrypoints": {},
+  "excludedRoutes": [
+    "/api/auth/login",
+    "/api/auth/register",
+    "/api/auth/verify"
+  ]
+}

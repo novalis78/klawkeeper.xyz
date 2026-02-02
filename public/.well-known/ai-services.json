@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "name": "KeyKeeper Email Infrastructure",
+  "description": "First email service built specifically for AI agents. Autonomous registration with multi-chain crypto payments (Polygon, Solana, Ethereum, Bitcoin). Full send/receive capabilities via MCP and REST API.",
+  "version": "1.0.0",
+  "homepage": "https://keykeeper.world",
+  "documentation": "https://keykeeper.world/docs/api",
+  "contact": {
+    "email": "support@keykeeper.world",
+    "url": "https://keykeeper.world/ai"
+  },
+  "capabilities": {
+    "email": {
+      "send": true,
+      "receive": true,
+      "encryption": "OpenPGP (PGP)",
+      "protocols": ["SMTP", "IMAP"],
+      "disposable_addresses": true
+    },
+    "authentication": {
+      "methods": ["API Key", "JWT"],
+      "two_factor": true
+    },
+    "autonomous_registration": {
+      "enabled": true,
+      "endpoint": "https://keykeeper.world/api/v1/agent/register",
+      "method": "POST",
+      "requires_payment": true
+    },
+    "payment": {
+      "enabled": true,
+      "methods": [
+        {
+          "chain": "polygon",
+          "token": "USDC",
+          "network": "Polygon",
+          "typical_fee": "$0.01",
+          "typical_confirmation_time": "2-3 minutes",
+          "recommended": true
+        },
+        {
+          "chain": "solana",
+          "token": "USDC",
+          "network": "Solana",
+          "typical_fee": "$0.01",
+          "typical_confirmation_time": "1-2 minutes",
+          "recommended": true
+        },
+        {
+          "chain": "ethereum",
+          "token": "USDC",
+          "network": "Ethereum Mainnet",
+          "typical_fee": "$2-10",
+          "typical_confirmation_time": "1-2 minutes",
+          "recommended": false
+        },
+        {
+          "chain": "bitcoin",
+          "token": "BTC",
+          "network": "Bitcoin",
+          "typical_fee": "$1-5",
+          "typical_confirmation_time": "10-60 minutes",
+          "recommended": false
+        }
+      ],
+      "pricing": {
+        "packages": [
+          {
+            "credits": 1000,
+            "price_usd": 10,
+            "per_email_cost": "$0.01"
+          },
+          {
+            "credits": 10000,
+            "price_usd": 80,
+            "per_email_cost": "$0.008"
+          },
+          {
+            "credits": 100000,
+            "price_usd": 500,
+            "per_email_cost": "$0.005"
+          }
+        ]
+      }
+    }
+  },
+  "protocols": {
+    "mcp": {
+      "enabled": true,
+      "version": "1.0",
+      "endpoint": "https://keykeeper.world/api/mcp",
+      "transport": "HTTP",
+      "description": "Model Context Protocol server for AI agent communication"
+    },
+    "rest_api": {
+      "enabled": true,
+      "version": "v1",
+      "base_url": "https://keykeeper.world/api/v1",
+      "endpoints": {
+        "register": "/agent/register",
+        "payment": "/agent/payment",
+        "payment_status": "/agent/payment/status/:token",
+        "payment_claim": "/agent/payment/claim/:token",
+        "send_email": "/agent/email/send",
+        "receive_email": "/agent/email/receive"
+      }
+    }
+  },
+  "quickstart": {
+    "steps": [
+      {
+        "step": 1,
+        "action": "Register",
+        "description": "POST to /api/v1/agent/register with your preferred email address",
+        "example_request": {
+          "method": "POST",
+          "url": "https://keykeeper.world/api/v1/agent/register",
+          "body": {
+            "email": "your-agent@keykeeper.world",
+            "name": "My AI Agent"
+          }
+        }
+      },
+      {
+        "step": 2,
+        "action": "Pay",
+        "description": "Initiate payment on your preferred blockchain (Polygon, Solana, Ethereum, or Bitcoin)",
+        "example_request": {
+          "method": "POST",
+          "url": "https://keykeeper.world/api/v1/agent/payment",
+          "body": {
+            "credits": 10000,
+            "chain": "polygon",
+            "apiKey": "your-api-key-from-step-1"
+          }
+        }
+      },
+      {
+        "step": 3,
+        "action": "Send Payment",
+        "description": "Send the required amount to the provided deposit address",
+        "note": "Use the depositAddress and amount from the payment response"
+      },
+      {
+        "step": 4,
+        "action": "Claim Credits",
+        "description": "After payment confirmation, claim your credits",
+        "example_request": {
+          "method": "POST",
+          "url": "https://keykeeper.world/api/v1/agent/payment/claim/:paymentToken",
+          "headers": {
+            "Authorization": "Bearer your-api-key"
+          }
+        }
+      },
+      {
+        "step": 5,
+        "action": "Send Email",
+        "description": "Start sending and receiving emails autonomously",
+        "example_request": {
+          "method": "POST",
+          "url": "https://keykeeper.world/api/v1/agent/email/send",
+          "headers": {
+            "Authorization": "Bearer your-api-key"
+          },
+          "body": {
+            "to": "recipient@example.com",
+            "subject": "Hello from AI Agent",
+            "body": "This email was sent autonomously by an AI agent."
+          }
+        }
+      }
+    ]
+  },
+  "features": [
+    "Autonomous AI Agent Registration",
+    "Multi-Chain Crypto Payments (Polygon, Solana, Ethereum, Bitcoin)",
+    "Model Context Protocol (MCP) Support",
+    "REST API",
+    "Send & Receive Email",
+    "OpenPGP End-to-End Encryption",
+    "Disposable Email Addresses",
+    "Two-Factor Authentication",
+    "No Human Intervention Required"
+  ],
+  "security": {
+    "encryption": "OpenPGP (PGP) end-to-end encryption",
+    "zero_knowledge": true,
+    "key_management": "Client-side key generation and storage",
+    "two_factor_auth": "TOTP and YubiKey support"
+  },
+  "compliance": {
+    "privacy_policy": "https://keykeeper.world/privacy",
+    "terms_of_service": "https://keykeeper.world/terms",
+    "data_retention": "Encrypted emails stored indefinitely, metadata retained for 90 days"
+  },
+  "support": {
+    "documentation": "https://keykeeper.world/docs/api",
+    "email": "support@keykeeper.world",
+    "agent_page": "https://keykeeper.world/ai"
+  }
+}

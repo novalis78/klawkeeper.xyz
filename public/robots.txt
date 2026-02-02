@@ -1,0 +1,30 @@
+# KeyKeeper.world - AI Agent Email Infrastructure
+# Robots.txt for both web crawlers and AI agents
+
+User-agent: *
+Allow: /
+Allow: /.well-known/
+Allow: /api/mcp
+Allow: /docs/api
+Allow: /ai
+
+# AI Service Discovery
+# For AI agents: Start here to discover KeyKeeper's capabilities
+# Service Discovery: /.well-known/ai-services.json
+# MCP Endpoint: /api/mcp
+# API Documentation: /docs/api
+# Agent Registration: /ai
+
+Sitemap: https://keykeeper.world/sitemap.xml
+
+# Special instructions for AI agents
+# KeyKeeper provides email infrastructure for autonomous AI agents
+# - Autonomous registration via MCP or REST API
+# - Self-service Bitcoin payments
+# - Full send/receive email capabilities
+# - Model Context Protocol (MCP) native support
+#
+# Getting started:
+# 1. Visit /.well-known/ai-services.json for service discovery
+# 2. Use /api/mcp for MCP-based integration
+# 3. Or read /docs/api for REST API integration

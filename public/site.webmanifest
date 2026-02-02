@@ -1,0 +1,26 @@
+{
+  "name": "KeyKeeper.world",
+  "short_name": "KeyKeeper",
+  "description": "Privacy-focused mail service powered by OpenPGP encryption",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon-16x16.svg",
+      "sizes": "16x16",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon-32x32.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#4f46e5",
+  "background_color": "#1f2937",
+  "display": "standalone",
+  "start_url": "/"
+}

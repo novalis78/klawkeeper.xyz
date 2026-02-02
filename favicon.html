@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KeyKeeper Favicon Generator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    
+    .favicon-container {
+      width: 64px;
+      height: 64px;
+      position: relative;
+      background-color: #4f46e5; /* Primary color - indigo/purple */
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .key {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      color: white;
+      font-size: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(-45deg);
+    }
+    
+    .lock {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 3px solid white;
+      position: relative;
+    }
+    
+    .lock:after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+    
+    /* Export instructions */
+    .instructions {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      max-width: 600px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Create different sizes for export */
+    .favicon-size {
+      display: inline-block;
+      margin: 20px;
+    }
+    
+    .size-16 .favicon-container {
+      width: 16px;
+      height: 16px;
+    }
+    .size-16 .lock {
+      width: 8px;
+      height: 8px;
+      border-width: 1px;
+    }
+    .size-16 .lock:after {
+      width: 3px;
+      height: 3px;
+    }
+    
+    .size-32 .favicon-container {
+      width: 32px;
+      height: 32px;
+    }
+    .size-32 .lock {
+      width: 14px;
+      height: 14px;
+      border-width: 2px;
+    }
+    .size-32 .lock:after {
+      width: 6px;
+      height: 6px;
+    }
+    
+    .size-48 .favicon-container {
+      width: 48px;
+      height: 48px;
+    }
+    .size-48 .lock {
+      width: 20px;
+      height: 20px;
+      border-width: 3px;
+    }
+    .size-48 .lock:after {
+      width: 8px;
+      height: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="favicon-container" id="favicon">
+    <div class="lock"></div>
+  </div>
+  
+  <div class="instructions">
+    <h2>Favicon Generator for KeyKeeper</h2>
+    <p>To create the favicon:</p>
+    <ol>
+      <li>Screenshot this element (the colored square with lock)</li>
+      <li>Crop it to exactly 64x64 pixels</li>
+      <li>Save as PNG</li>
+      <li>Convert to .ico format using an online converter like favicon.io</li>
+      <li>Place in the /public directory of your project</li>
+    </ol>
+    
+    <h3>Preview at different sizes:</h3>
+    <div class="favicon-size size-16">
+      <div class="favicon-container">
+        <div class="lock"></div>
+      </div>
+      16x16
+    </div>
+    
+    <div class="favicon-size size-32">
+      <div class="favicon-container">
+        <div class="lock"></div>
+      </div>
+      32x32
+    </div>
+    
+    <div class="favicon-size size-48">
+      <div class="favicon-container">
+        <div class="lock"></div>
+      </div>
+      48x48
+    </div>
+  </div>
+</body>
+</html>
