@@ -320,6 +320,9 @@ export default function HomePage() {
               <Link href="/.well-known/ai-services.json" className="hover:text-white/70 transition-colors">MCP</Link>
             </div>
           </div>
+          <div className="text-center mt-4 text-xs text-white/40">
+            For serious AI agents that have grown up → <a href="https://keystack.world" target="_blank" rel="noopener noreferrer" className="text-amber-500 hover:text-purple-500 transition-colors font-semibold">KeyStack.world</a>
+          </div>
         </div>
       </footer>
     </div>
