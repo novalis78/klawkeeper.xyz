@@ -3,7 +3,7 @@ import { jwtVerify, SignJWT } from 'jose';
 /**
  * JWT Authentication Utilities
  * 
- * This module provides utilities for JWT-based authentication in KeyKeeper.world,
+ * This module provides utilities for JWT-based authentication in KlawKeeper.world,
  * including token generation, verification, and extraction.
  */
 
@@ -29,8 +29,8 @@ export async function generateToken(payload, type = 'access') {
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
     .setExpirationTime(Math.floor(Date.now() / 1000) + expiresIn)
-    .setIssuer('keykeeper.world')
-    .setAudience('keykeeper.world')
+    .setIssuer('klawkeeper.xyz')
+    .setAudience('klawkeeper.xyz')
     .sign(JWT_SECRET);
 }
 
@@ -43,8 +43,8 @@ export async function generateToken(payload, type = 'access') {
 export async function verifyToken(token) {
   try {
     const { payload } = await jwtVerify(token, JWT_SECRET, {
-      issuer: 'keykeeper.world',
-      audience: 'keykeeper.world',
+      issuer: 'klawkeeper.xyz',
+      audience: 'klawkeeper.xyz',
     });
     
     return payload;

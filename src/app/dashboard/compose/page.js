@@ -122,7 +122,7 @@ function ComposeContent() {
         } else {
           console.warn('No email found for user, falling back to localStorage');
           // Fallback to localStorage if no real email found
-          const fallbackEmail = localStorage.getItem('user_email') || 'user@keykeeper.world';
+          const fallbackEmail = localStorage.getItem('user_email') || 'user@klawkeeper.xyz';
           const fallbackName = localStorage.getItem('user_name') || fallbackEmail.split('@')[0];
           const mockAccounts = [
             { id: 1, email: fallbackEmail, name: fallbackName, isDefault: true }
@@ -140,7 +140,7 @@ function ComposeContent() {
         console.error('Error fetching user email accounts:', error);
 
         // Fallback to localStorage on error
-        const fallbackEmail = localStorage.getItem('user_email') || 'user@keykeeper.world';
+        const fallbackEmail = localStorage.getItem('user_email') || 'user@klawkeeper.xyz';
         const fallbackName = localStorage.getItem('user_name') || fallbackEmail.split('@')[0];
         const mockAccounts = [
           { id: 1, email: fallbackEmail, name: fallbackName, isDefault: true }
@@ -376,7 +376,7 @@ function ComposeContent() {
       };
       
       // Get sender name with fallback
-      const senderName = selectedAccount.name || 'KeyKeeper User';
+      const senderName = selectedAccount.name || 'KlawKeeper User';
 
       // Generate HTML from template (returns null for plain text)
       const htmlBody = formatEmailHTML(emailData.message, senderName, selectedAccount.email);

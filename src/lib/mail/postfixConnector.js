@@ -17,21 +17,21 @@
  *    - Set up DKIM signatures for all outgoing mail
  *    - Add this to Postfix with OpenDKIM (see opendkim.org)
  *    - Example DNS record:
- *      selector._domainkey.keykeeper.world. IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBA..."
+ *      selector._domainkey.klawkeeper.xyz. IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBA..."
  * 
  * 2. SPF (Sender Policy Framework)
  *    - Create an SPF record to authorize sending servers
  *    - Example DNS record:
- *      keykeeper.world. IN TXT "v=spf1 ip4:107.170.27.222 ~all"
+ *      klawkeeper.xyz. IN TXT "v=spf1 ip4:107.170.27.222 ~all"
  * 
  * 3. DMARC (Domain-based Message Authentication, Reporting & Conformance)
  *    - Configure DMARC policy to handle SPF/DKIM failures
  *    - Example DNS record:
- *      _dmarc.keykeeper.world. IN TXT "v=DMARC1; p=quarantine; rua=mailto:dmarc@keykeeper.world"
+ *      _dmarc.klawkeeper.xyz. IN TXT "v=DMARC1; p=quarantine; rua=mailto:dmarc@klawkeeper.xyz"
  * 
  * 4. PTR (Reverse DNS)
  *    - Set proper PTR record for the server IP (107.170.27.222)
- *    - Should resolve to mail.keykeeper.world
+ *    - Should resolve to mail.klawkeeper.xyz
  * 
  * 5. Bounce Handling
  *    - Implement automated handling of bounced emails
@@ -55,7 +55,7 @@ const SMTP_CONFIG = {
   port: 587,
   secure: false, // true for 465, false for other ports
   auth: {
-    user: process.env.MAIL_USER || 'lennart@keykeeper.world',
+    user: process.env.MAIL_USER || 'lennart@klawkeeper.xyz',
     pass: process.env.MAIL_PASSWORD, // Must be provided via environment variable
     type: 'LOGIN' // Use uppercase LOGIN instead of lowercase login
   },
@@ -70,7 +70,7 @@ const IMAP_CONFIG = {
   port: 993,
   secure: true,
   auth: {
-    user: process.env.MAIL_USER || 'lennart@keykeeper.world',
+    user: process.env.MAIL_USER || 'lennart@klawkeeper.xyz',
     pass: process.env.MAIL_PASSWORD, // Must be provided via environment variable
     type: 'LOGIN' // Use uppercase LOGIN instead of lowercase login
   },
@@ -213,7 +213,7 @@ export async function sendEmail(emailData, options = {}) {
       
       // Fallback case - shouldn't reach here with proper data
       console.warn('Invalid email address format, using fallback');
-      return process.env.MAIL_USER || 'noreply@keykeeper.world';
+      return process.env.MAIL_USER || 'noreply@klawkeeper.xyz';
     };
     
     // Format arrays of addresses
@@ -257,9 +257,9 @@ export async function sendEmail(emailData, options = {}) {
       attachments: formatAttachments(emailData.attachments),
       // Add standard headers to improve reputation for personal emails
       headers: {
-        'X-Mailer': 'KeyKeeper Secure Email',
+        'X-Mailer': 'KlawKeeper Secure Email',
         'X-Priority': '3',  // Normal priority
-        'Message-ID': `<${crypto.randomBytes(16).toString('hex')}@keykeeper.world>`
+        'Message-ID': `<${crypto.randomBytes(16).toString('hex')}@klawkeeper.xyz>`
       }
     };
     

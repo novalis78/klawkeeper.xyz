@@ -1,16 +1,16 @@
-# KeyKeeper MCP Server Documentation
+# KlawKeeper MCP Server Documentation
 
-**Model Context Protocol (MCP) Server for KeyKeeper Email Infrastructure**
+**Model Context Protocol (MCP) Server for KlawKeeper Email Infrastructure**
 
 Version: 1.0.0
 Protocol Version: 2024-11-05
-Endpoint: `https://keykeeper.world/api/mcp`
+Endpoint: `https://klawkeeper.xyz/api/mcp`
 
 ---
 
 ## What is MCP?
 
-The Model Context Protocol (MCP) is a standardized protocol that allows AI agents to discover and interact with external services. KeyKeeper's MCP server provides a seamless way for AI agents to send and receive emails without needing to understand REST APIs.
+The Model Context Protocol (MCP) is a standardized protocol that allows AI agents to discover and interact with external services. KlawKeeper's MCP server provides a seamless way for AI agents to send and receive emails without needing to understand REST APIs.
 
 ## Quick Start - Complete Autonomous Flow
 
@@ -19,19 +19,19 @@ AI agents can complete their entire lifecycle through MCP without any external d
 ### 1. Discover the Service
 
 ```bash
-curl https://keykeeper.world/.well-known/ai-services.json
+curl https://klawkeeper.xyz/.well-known/ai-services.json
 ```
 
 ### 2. Get Server Capabilities
 
 ```bash
-curl https://keykeeper.world/api/mcp
+curl https://klawkeeper.xyz/api/mcp
 ```
 
 ### 3. Register (No Auth Required)
 
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Content-Type: application/json" \
   -d '{
     "method": "tools/call",
@@ -50,7 +50,7 @@ curl -X POST https://keykeeper.world/api/mcp \
 ### 4. Purchase Credits (No Auth Required)
 
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Content-Type": application/json" \
   -d '{
     "method": "tools/call",
@@ -68,7 +68,7 @@ curl -X POST https://keykeeper.world/api/mcp \
 ### 5. Check Payment Status (No Auth Required)
 
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Content-Type: application/json" \
   -d '{
     "method": "tools/call",
@@ -86,7 +86,7 @@ Poll this every 5-10 minutes until `canClaim: true`
 ### 6. Claim Credits (No Auth Required)
 
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Content-Type: application/json" \
   -d '{
     "method": "tools/call",
@@ -103,7 +103,7 @@ curl -X POST https://keykeeper.world/api/mcp \
 ### 7. Send Email (Requires Auth)
 
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -123,7 +123,7 @@ curl -X POST https://keykeeper.world/api/mcp \
 
 ## Server Information
 
-**Endpoint:** `https://keykeeper.world/api/mcp`
+**Endpoint:** `https://klawkeeper.xyz/api/mcp`
 **Protocol Version:** `2024-11-05`
 **Server Name:** `keykeeper-email`
 **Server Version:** `1.0.0`
@@ -173,7 +173,7 @@ Register a new AI agent account. Returns API key (starts with 0 credits).
 {
   "success": true,
   "apiKey": "kk_abc123...",
-  "email": "agent-my-agent-a1b2c3@keykeeper.world",
+  "email": "agent-my-agent-a1b2c3@klawkeeper.xyz",
   "userId": "uuid",
   "credits": 0,
   "note": "Store your API key securely - it cannot be retrieved later."
@@ -257,7 +257,7 @@ Claim credits after payment is confirmed. Returns API key if creating new accoun
   "success": true,
   "credits": 10000,
   "apiKey": "kk_new_key...",
-  "email": "agent-my-agent@keykeeper.world",
+  "email": "agent-my-agent@klawkeeper.xyz",
   "message": "Successfully claimed 10000 credits! New agent account created."
 }
 ```
@@ -293,7 +293,7 @@ Send an email from your agent account. Deducts 1.0 credit.
 
 **Example Request:**
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Authorization: Bearer kk_abc123..." \
   -H "Content-Type: application/json" \
   -d '{
@@ -315,7 +315,7 @@ curl -X POST https://keykeeper.world/api/mcp \
   "content": [
     {
       "type": "text",
-      "text": "{\n  \"success\": true,\n  \"messageId\": \"<abc@keykeeper.world>\",\n  \"creditsRemaining\": 999.0,\n  \"message\": \"Email sent successfully\"\n}"
+      "text": "{\n  \"success\": true,\n  \"messageId\": \"<abc@klawkeeper.xyz>\",\n  \"creditsRemaining\": 999.0,\n  \"message\": \"Email sent successfully\"\n}"
     }
   ]
 }
@@ -337,7 +337,7 @@ Check your inbox for new emails. Returns list of recent messages.
 
 **Example Request:**
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Authorization: Bearer kk_abc123..." \
   -H "Content-Type: application/json" \
   -d '{
@@ -378,7 +378,7 @@ Retrieve full content of a specific email by ID.
 
 **Example Request:**
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Authorization: Bearer kk_abc123..." \
   -H "Content-Type: application/json" \
   -d '{
@@ -398,7 +398,7 @@ curl -X POST https://keykeeper.world/api/mcp \
   "content": [
     {
       "type": "text",
-      "text": "{\n  \"id\": \"123\",\n  \"from\": \"sender@example.com\",\n  \"fromName\": \"Sender Name\",\n  \"to\": [\"you@keykeeper.world\"],\n  \"subject\": \"Hello\",\n  \"date\": \"2025-01-21T10:00:00Z\",\n  \"body\": {\n    \"text\": \"Email content...\",\n    \"html\": null\n  },\n  \"attachments\": [],\n  \"headers\": {\n    \"messageId\": \"<abc@example.com>\",\n    \"inReplyTo\": null\n  }\n}"
+      "text": "{\n  \"id\": \"123\",\n  \"from\": \"sender@example.com\",\n  \"fromName\": \"Sender Name\",\n  \"to\": [\"you@klawkeeper.xyz\"],\n  \"subject\": \"Hello\",\n  \"date\": \"2025-01-21T10:00:00Z\",\n  \"body\": {\n    \"text\": \"Email content...\",\n    \"html\": null\n  },\n  \"attachments\": [],\n  \"headers\": {\n    \"messageId\": \"<abc@example.com>\",\n    \"inReplyTo\": null\n  }\n}"
     }
   ]
 }
@@ -417,7 +417,7 @@ Check your current credit balance and account status.
 
 **Example Request:**
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Authorization: Bearer kk_abc123..." \
   -H "Content-Type: application/json" \
   -d '{
@@ -435,7 +435,7 @@ curl -X POST https://keykeeper.world/api/mcp \
   "content": [
     {
       "type": "text",
-      "text": "{\n  \"credits\": 1000.0,\n  \"email\": \"agent-my-agent@keykeeper.world\",\n  \"accountStatus\": \"active\",\n  \"accountType\": \"agent\"\n}"
+      "text": "{\n  \"credits\": 1000.0,\n  \"email\": \"agent-my-agent@klawkeeper.xyz\",\n  \"accountStatus\": \"active\",\n  \"accountType\": \"agent\"\n}"
     }
   ]
 }
@@ -528,7 +528,7 @@ from mcp.client.stdio import stdio_client
 server_params = StdioServerParameters(
     command="curl",
     args=["-H", "Authorization: Bearer YOUR_API_KEY",
-          "https://keykeeper.world/api/mcp"],
+          "https://klawkeeper.xyz/api/mcp"],
     env=None
 )
 
@@ -559,7 +559,7 @@ const transport = new StdioClientTransport({
   command: "curl",
   args: [
     "-H", "Authorization: Bearer YOUR_API_KEY",
-    "https://keykeeper.world/api/mcp"
+    "https://klawkeeper.xyz/api/mcp"
   ]
 });
 
@@ -587,10 +587,10 @@ const result = await client.callTool({
 
 ```bash
 # 1. Get capabilities
-curl https://keykeeper.world/api/mcp
+curl https://klawkeeper.xyz/api/mcp
 
 # 2. Call tool
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -662,10 +662,10 @@ Both interfaces share the same backend, so choose based on your needs!
 ## Support
 
 - **MCP Specification:** https://modelcontextprotocol.io
-- **KeyKeeper Docs:** https://keykeeper.world/docs/api
-- **API Status:** https://status.keykeeper.world
-- **Support Email:** support@keykeeper.world
-- **GitHub:** https://github.com/novalis78/keykeeper.world
+- **KlawKeeper Docs:** https://klawkeeper.xyz/docs/api
+- **API Status:** https://status.klawkeeper.xyz
+- **Support Email:** support@klawkeeper.xyz
+- **GitHub:** https://github.com/novalis78/klawkeeper.xyz
 
 ---
 

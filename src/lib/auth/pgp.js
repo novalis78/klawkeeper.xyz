@@ -1,7 +1,7 @@
 /**
  * PGP Authentication Utilities
  * 
- * This module provides utilities for PGP-based authentication in KeyKeeper.world,
+ * This module provides utilities for PGP-based authentication in KlawKeeper.world,
  * including key generation, challenge signing, and verification.
  * 
  * IMPORTANT COMPATIBILITY NOTES:
@@ -624,7 +624,7 @@ const pgpUtils = {
         const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         
         // Create a simple armored signature format
-        const fallbackSignature = `-----BEGIN PGP SIGNATURE-----\nVersion: KeyKeeper v1.0\n\n${hashHex}\n-----END PGP SIGNATURE-----`;
+        const fallbackSignature = `-----BEGIN PGP SIGNATURE-----\nVersion: KlawKeeper v1.0\n\n${hashHex}\n-----END PGP SIGNATURE-----`;
         
         console.log('=== KEYKEEPER: Generated fallback signature ===');
         console.log('Warning: This is not a cryptographically valid PGP signature!');

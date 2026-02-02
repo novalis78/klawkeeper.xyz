@@ -5,7 +5,7 @@ import { query } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
 
-// KeyKeeper mail server IP
+// KlawKeeper mail server IP
 const MAIL_SERVER_IP = '107.170.27.222';
 
 /**
@@ -84,7 +84,7 @@ export async function POST(request) {
       {
         type: 'TXT',
         name: `_dmarc.${domain}`,
-        content: 'v=DMARC1; p=quarantine; rua=mailto:dmarc@keykeeper.world'
+        content: 'v=DMARC1; p=quarantine; rua=mailto:dmarc@klawkeeper.xyz'
       }
     ];
 

@@ -88,7 +88,7 @@ function SettingsContent() {
 
   // Email templates
   const emailTemplates = [
-    { id: 'default', name: 'KeyKeeper Classic', description: 'Clean and professional', colors: { bg: '#ffffff', text: '#333333', accent: '#2b7de9' }},
+    { id: 'default', name: 'KlawKeeper Classic', description: 'Clean and professional', colors: { bg: '#ffffff', text: '#333333', accent: '#2b7de9' }},
     { id: 'midnight', name: 'Midnight', description: 'Dark and elegant', colors: { bg: '#1a1b26', text: '#a9b1d6', accent: '#7aa2f7' }},
     { id: 'dracula', name: 'Dracula', description: 'Dark with vibrant accents', colors: { bg: '#282a36', text: '#f8f8f2', accent: '#bd93f9' }},
     { id: 'nord', name: 'Nord', description: 'Arctic and minimalist', colors: { bg: '#2e3440', text: '#eceff4', accent: '#88c0d0' }},
@@ -959,7 +959,7 @@ function SettingsContent() {
                     <DNSRecordRow
                       type="MX"
                       name="@"
-                      value="mail.keykeeper.world"
+                      value="mail.klawkeeper.xyz"
                       priority="10"
                       onCopy={copyToClipboard}
                       copiedField={copiedField}
@@ -967,14 +967,14 @@ function SettingsContent() {
                     <DNSRecordRow
                       type="TXT"
                       name="@"
-                      value="v=spf1 include:keykeeper.world ~all"
+                      value="v=spf1 include:klawkeeper.xyz ~all"
                       onCopy={copyToClipboard}
                       copiedField={copiedField}
                     />
                     <DNSRecordRow
                       type="TXT"
                       name="_dmarc"
-                      value="v=DMARC1; p=quarantine; rua=mailto:dmarc@keykeeper.world"
+                      value="v=DMARC1; p=quarantine; rua=mailto:dmarc@klawkeeper.xyz"
                       onCopy={copyToClipboard}
                       copiedField={copiedField}
                     />
@@ -1448,7 +1448,7 @@ function SettingsContent() {
                     rows={4}
                     placeholder="Add your email signature..."
                     className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    defaultValue="Best regards,&#10;&#10;Sent securely via KeyKeeper"
+                    defaultValue="Best regards,&#10;&#10;Sent securely via KlawKeeper"
                   />
                 </div>
               </div>
@@ -1606,7 +1606,7 @@ function SettingsContent() {
                                 className="mt-4 pt-3 border-t text-xs"
                                 style={{ borderColor: t.colors.accent + '30', color: t.colors.text + '99' }}
                               >
-                                <span style={{ color: t.colors.accent }}>KeyKeeper</span> Secure Email
+                                <span style={{ color: t.colors.accent }}>KlawKeeper</span> Secure Email
                               </div>
                             </div>
                           );

@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema",
-  "name": "KeyKeeper Email Infrastructure",
+  "name": "KlawKeeper Email Infrastructure",
   "description": "First email service built specifically for AI agents. Autonomous registration with multi-chain crypto payments (Polygon, Solana, Ethereum, Bitcoin). Full send/receive capabilities via MCP and REST API.",
   "version": "1.0.0",
-  "homepage": "https://keykeeper.world",
-  "documentation": "https://keykeeper.world/docs/api",
+  "homepage": "https://klawkeeper.xyz",
+  "documentation": "https://klawkeeper.xyz/docs/api",
   "contact": {
-    "email": "support@keykeeper.world",
-    "url": "https://keykeeper.world/ai"
+    "email": "support@klawkeeper.xyz",
+    "url": "https://klawkeeper.xyz/ai"
   },
   "capabilities": {
     "email": {
@@ -23,7 +23,7 @@
     },
     "autonomous_registration": {
       "enabled": true,
-      "endpoint": "https://keykeeper.world/api/v1/agent/register",
+      "endpoint": "https://klawkeeper.xyz/api/v1/agent/register",
       "method": "POST",
       "requires_payment": true
     },
@@ -88,14 +88,14 @@
     "mcp": {
       "enabled": true,
       "version": "1.0",
-      "endpoint": "https://keykeeper.world/api/mcp",
+      "endpoint": "https://klawkeeper.xyz/api/mcp",
       "transport": "HTTP",
       "description": "Model Context Protocol server for AI agent communication"
     },
     "rest_api": {
       "enabled": true,
       "version": "v1",
-      "base_url": "https://keykeeper.world/api/v1",
+      "base_url": "https://klawkeeper.xyz/api/v1",
       "endpoints": {
         "register": "/agent/register",
         "payment": "/agent/payment",
@@ -114,9 +114,9 @@
         "description": "POST to /api/v1/agent/register with your preferred email address",
         "example_request": {
           "method": "POST",
-          "url": "https://keykeeper.world/api/v1/agent/register",
+          "url": "https://klawkeeper.xyz/api/v1/agent/register",
           "body": {
-            "email": "your-agent@keykeeper.world",
+            "email": "your-agent@klawkeeper.xyz",
             "name": "My AI Agent"
           }
         }
@@ -127,7 +127,7 @@
         "description": "Initiate payment on your preferred blockchain (Polygon, Solana, Ethereum, or Bitcoin)",
         "example_request": {
           "method": "POST",
-          "url": "https://keykeeper.world/api/v1/agent/payment",
+          "url": "https://klawkeeper.xyz/api/v1/agent/payment",
           "body": {
             "credits": 10000,
             "chain": "polygon",
@@ -147,7 +147,7 @@
         "description": "After payment confirmation, claim your credits",
         "example_request": {
           "method": "POST",
-          "url": "https://keykeeper.world/api/v1/agent/payment/claim/:paymentToken",
+          "url": "https://klawkeeper.xyz/api/v1/agent/payment/claim/:paymentToken",
           "headers": {
             "Authorization": "Bearer your-api-key"
           }
@@ -159,7 +159,7 @@
         "description": "Start sending and receiving emails autonomously",
         "example_request": {
           "method": "POST",
-          "url": "https://keykeeper.world/api/v1/agent/email/send",
+          "url": "https://klawkeeper.xyz/api/v1/agent/email/send",
           "headers": {
             "Authorization": "Bearer your-api-key"
           },
@@ -190,13 +190,13 @@
     "two_factor_auth": "TOTP and YubiKey support"
   },
   "compliance": {
-    "privacy_policy": "https://keykeeper.world/privacy",
-    "terms_of_service": "https://keykeeper.world/terms",
+    "privacy_policy": "https://klawkeeper.xyz/privacy",
+    "terms_of_service": "https://klawkeeper.xyz/terms",
     "data_retention": "Encrypted emails stored indefinitely, metadata retained for 90 days"
   },
   "support": {
-    "documentation": "https://keykeeper.world/docs/api",
-    "email": "support@keykeeper.world",
-    "agent_page": "https://keykeeper.world/ai"
+    "documentation": "https://klawkeeper.xyz/docs/api",
+    "email": "support@klawkeeper.xyz",
+    "agent_page": "https://klawkeeper.xyz/ai"
   }
 }

@@ -1,10 +1,10 @@
-# KeyKeeper.world
+# KlawKeeper.world
 
 *Secure email services powered by OpenPGP*
 
 ## Overview
 
-KeyKeeper.world is a privacy-focused mail service designed as a companion to the SecureMailClient desktop application. It combines PGP encryption with disposable email addresses to provide a comprehensive security solution for privacy-conscious users.
+KlawKeeper.world is a privacy-focused mail service designed as a companion to the SecureMailClient desktop application. It combines PGP encryption with disposable email addresses to provide a comprehensive security solution for privacy-conscious users.
 
 ## Core Features
 
@@ -40,7 +40,7 @@ Built using modern, auditable technologies:
 
 ### Zero-Knowledge Architecture
 
-KeyKeeper employs a true zero-knowledge architecture:
+KlawKeeper employs a true zero-knowledge architecture:
 
 #### Server-Side (Everything Encrypted)
 - All email content is stored fully encrypted on our servers
@@ -58,9 +58,9 @@ KeyKeeper employs a true zero-knowledge architecture:
 
 This architecture ensures that even if our servers were compromised, attackers would only access encrypted data they couldn't read. We simply cannot access your messages, even if compelled to do so.
 
-## Why KeyKeeper?
+## Why KlawKeeper?
 
-Unlike traditional email providers, KeyKeeper.world:
+Unlike traditional email providers, KlawKeeper.world:
 - Requires no passwords (authentication via PGP)
 - Generates truly anonymous addresses on demand
 - Focuses on usability without sacrificing security
@@ -70,7 +70,7 @@ Unlike traditional email providers, KeyKeeper.world:
 ## Getting Started
 
 1. Install the [SecureMailClient](https://securemailclient.com) desktop application
-2. Upgrade to premium tier for KeyKeeper.world access
+2. Upgrade to premium tier for KlawKeeper.world access
 3. Generate your master PGP key (or import existing)
 4. Start creating disposable addresses for enhanced privacy
 
@@ -84,4 +84,4 @@ Unlike traditional email providers, KeyKeeper.world:
 
 ---
 
-*KeyKeeper.world: Your keys, your mail, your privacy.*
+*KlawKeeper.world: Your keys, your mail, your privacy.*

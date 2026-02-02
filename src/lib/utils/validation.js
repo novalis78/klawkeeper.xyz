@@ -1,5 +1,5 @@
 /**
- * Validation utilities for KeyKeeper
+ * Validation utilities for KlawKeeper
  * 
  * This module provides utilities for validating user input and data.
  */
@@ -124,7 +124,7 @@ export function sanitizeAddress(address) {
   if (!isValidEmail(sanitized)) return false;
   
   // Check for domain restrictions (could be expanded for more security)
-  if (sanitized.includes('@keykeeper.world')) {
+  if (sanitized.includes('@klawkeeper.xyz')) {
     return sanitized;
   }
   

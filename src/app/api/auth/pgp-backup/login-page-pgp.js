@@ -148,7 +148,7 @@ export default function LoginPage() {
         console.log(`Account ID: ${accountId}`);
         
         // Prepare the mail credentials - the same structure used during signup
-        const mailServer = process.env.MAIL_HOST || 'mail.keykeeper.world';
+        const mailServer = process.env.MAIL_HOST || 'mail.klawkeeper.xyz';
         console.log(`Mail server: ${mailServer}`);
         
         const credentials = {
@@ -247,7 +247,7 @@ export default function LoginPage() {
       
       // Mock a hardware key signature
       const hwChallenge = challengeData.challenge;
-      const hwSignature = `-----BEGIN PGP SIGNATURE-----\nVersion: KeyKeeper v1.0\n\nHardwareKeySignature\n-----END PGP SIGNATURE-----`;
+      const hwSignature = `-----BEGIN PGP SIGNATURE-----\nVersion: KlawKeeper v1.0\n\nHardwareKeySignature\n-----END PGP SIGNATURE-----`;
       
       // Send to verify endpoint
       const verifyResponse = await fetch('/api/auth/verify', {
@@ -289,13 +289,13 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-2xl">
         <Link href="/" className="flex justify-center">
-          <span className="sr-only">KeyKeeper</span>
+          <span className="sr-only">KlawKeeper</span>
           <div className="h-14 w-14 rounded-full bg-primary-600 flex items-center justify-center">
             <LockClosedIcon className="h-8 w-8 text-white" />
           </div>
         </Link>
         <h1 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">
-          KeyKeeper.world
+          KlawKeeper.world
         </h1>
         <h2 className="mt-2 text-center text-xl text-gray-600 dark:text-gray-400">
           Sign in with your PGP key

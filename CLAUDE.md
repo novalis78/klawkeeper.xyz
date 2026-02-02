@@ -19,7 +19,7 @@ This machine runs:
 - MySQL database (local)
 - Postfix/Dovecot mail server
 - Coolify deployment system
-- The keykeeper.world codebase
+- The klawkeeper.xyz codebase
 
 ## Key Architecture Notes
 

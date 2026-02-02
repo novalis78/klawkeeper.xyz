@@ -40,7 +40,7 @@ export async function POST(request) {
 
     // Generate TOTP secret
     const totp = new OTPAuth.TOTP({
-      issuer: 'KeyKeeper.world',
+      issuer: 'KlawKeeper.world',
       label: user.email,
       algorithm: 'SHA1',
       digits: 6,
@@ -59,7 +59,7 @@ export async function POST(request) {
     // Generate QR code URI with image parameter (supported by some authenticators)
     let otpauthUrl = totp.toString();
     // Add image parameter for authenticators that support it (unofficial but widely supported)
-    const iconUrl = 'https://keykeeper.world/logo.png';
+    const iconUrl = 'https://klawkeeper.xyz/logo.png';
     otpauthUrl += `&image=${encodeURIComponent(iconUrl)}`;
     
     // Store the secret in database (not enabled yet)

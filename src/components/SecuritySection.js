@@ -43,7 +43,7 @@ export default function SecuritySection() {
             Built with privacy at its core
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            KeyKeeper.world is designed from the ground up with security best practices and privacy-preserving technologies.
+            KlawKeeper.world is designed from the ground up with security best practices and privacy-preserving technologies.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export default function SecuritySection() {
               <div>
                 <h3 className="text-2xl font-bold">Our Security Promise</h3>
                 <p className="mt-4 max-w-2xl text-primary-100">
-                  We believe that privacy is a fundamental right. That's why we've built KeyKeeper.world with a zero-knowledge architecture
+                  We believe that privacy is a fundamental right. That's why we've built KlawKeeper.world with a zero-knowledge architecture
                   that makes it mathematically impossible for us to access your messages.
                 </p>
               </div>

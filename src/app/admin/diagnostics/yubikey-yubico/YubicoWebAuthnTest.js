@@ -50,7 +50,7 @@ export default function YubicoWebAuthnTest() {
       const credentialCreationOptions = {
         challenge: challenge,
         rp: {
-          name: "KeyKeeper",
+          name: "KlawKeeper",
           id: window.location.hostname,
         },
         user: {
@@ -153,7 +153,7 @@ export default function YubicoWebAuthnTest() {
 
       setSuccess('Authentication successful! Your YubiKey works perfectly.');
 
-      // Here we would derive the password for KeyKeeper
+      // Here we would derive the password for KlawKeeper
       const signature = new Uint8Array(assertion.response.signature);
       const password = await derivePassword(signature);
       console.log('Derived password (first 8 chars):', password.substring(0, 8));
@@ -225,7 +225,7 @@ export default function YubicoWebAuthnTest() {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                placeholder="test@keykeeper.world"
+                placeholder="test@klawkeeper.xyz"
               />
             </div>
 

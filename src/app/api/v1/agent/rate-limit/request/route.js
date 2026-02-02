@@ -102,7 +102,7 @@ export async function POST(request) {
     if (requestedLimit > 10000) {
       return NextResponse.json(
         {
-          error: 'Requested limit exceeds maximum (10,000/day). For higher limits, contact support@keykeeper.world',
+          error: 'Requested limit exceeds maximum (10,000/day). For higher limits, contact support@klawkeeper.xyz',
           maxAutoApproval: 10000
         },
         { status: 400 }

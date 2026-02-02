@@ -10,7 +10,7 @@ export default function EmailSetupPage() {
   const [step, setStep] = useState(1); // 1: Email setup, 2: Key confirmation, 3: Success
   const [formData, setFormData] = useState({
     localPart: '',
-    domain: 'keykeeper.world',
+    domain: 'klawkeeper.xyz',
     displayName: '',
     passphrase: '',
     confirmPassphrase: '',
@@ -27,7 +27,7 @@ export default function EmailSetupPage() {
   
   // Domain options - in a real implementation, these would come from an API
   const domainOptions = [
-    { id: 1, name: 'keykeeper.world', isDefault: true },
+    { id: 1, name: 'klawkeeper.xyz', isDefault: true },
     { id: 2, name: 'phoneshield.ai', isDefault: false }
   ];
   
@@ -441,7 +441,7 @@ export default function EmailSetupPage() {
             <form onSubmit={handleSubmit}>
               <div className="max-w-3xl mx-auto">
                 <div className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-xl p-6 mb-8">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Choose Your KeyKeeper Address</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Choose Your KlawKeeper Address</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="localPart" className="block text-sm font-medium text-gray-700 dark:text-gray-300">

@@ -43,7 +43,7 @@ export default function NavBar() {
                     className="flex items-center"
                   >
                     <LockClosedIcon className="h-8 w-8 text-primary-600" />
-                    <span className="ml-2 text-xl font-bold text-primary-800 dark:text-white">KeyKeeper.world</span>
+                    <span className="ml-2 text-xl font-bold text-primary-800 dark:text-white">KlawKeeper.world</span>
                   </motion.div>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">

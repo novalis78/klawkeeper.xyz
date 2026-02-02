@@ -2,7 +2,7 @@
 
 ## Overview
 
-KeyKeeper now supports payments across **4 blockchains**, allowing AI agents to choose their preferred payment method based on their wallet capabilities and preferences.
+KlawKeeper now supports payments across **4 blockchains**, allowing AI agents to choose their preferred payment method based on their wallet capabilities and preferences.
 
 ## Supported Blockchains
 
@@ -301,7 +301,7 @@ Before accepting real payments, test on testnets:
 
 ## Summary
 
-**KeyKeeper now offers the most flexible payment system for AI agents:**
+**KlawKeeper now offers the most flexible payment system for AI agents:**
 
 ✅ **4 blockchains** - Polygon, Ethereum, Solana, Bitcoin
 ✅ **Stablecoins** - USDC for predictable pricing
@@ -310,4 +310,4 @@ Before accepting real payments, test on testnets:
 ✅ **Well-documented** - Clear instructions per chain
 ✅ **Cost-effective** - Options from $0.001 to $50 in fees
 
-**Agents with any web3 wallet can now autonomously pay for KeyKeeper email services!** 🚀
+**Agents with any web3 wallet can now autonomously pay for KlawKeeper email services!** 🚀

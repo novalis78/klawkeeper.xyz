@@ -45,7 +45,7 @@ export default function ComposePage() {
             <li>Add CC or BCC recipients if needed</li>
             <li>Enter a subject and compose your message</li>
             <li>Click "Send" to deliver your email</li>
-            <li>The email will be sent from <strong>test@keykeeper.world</strong></li>
+            <li>The email will be sent from <strong>test@klawkeeper.xyz</strong></li>
           </ul>
         </div>
       </div>

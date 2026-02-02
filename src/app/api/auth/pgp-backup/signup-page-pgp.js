@@ -23,7 +23,7 @@ export default function SignupPage() {
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   
   // Fixed domain for signup
-  const domain = 'keykeeper.world';
+  const domain = 'klawkeeper.xyz';
   
   // Check username availability with debounce
   useEffect(() => {
@@ -66,7 +66,7 @@ export default function SignupPage() {
     setUsername(sanitizedValue);
   };
   
-  // Domain is fixed to keykeeper.world
+  // Domain is fixed to klawkeeper.xyz
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -99,13 +99,13 @@ export default function SignupPage() {
       {/* Logo and brand */}
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link href="/" className="flex justify-center">
-          <span className="sr-only">KeyKeeper</span>
+          <span className="sr-only">KlawKeeper</span>
           <div className="h-20 w-20 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 flex items-center justify-center shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 transition-all duration-300">
             <LockClosedIcon className="h-10 w-10 text-white" />
           </div>
         </Link>
         <h1 className="mt-6 text-center text-5xl font-extrabold text-white">
-          KeyKeeper<span className="text-primary-400">.world</span>
+          KlawKeeper<span className="text-primary-400">.world</span>
         </h1>
       </div>
 
@@ -153,7 +153,7 @@ export default function SignupPage() {
                     />
                   </div>
                   <div className="flex items-center px-4 py-4 text-lg font-medium text-gray-700 dark:text-gray-300 rounded-r-lg bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 whitespace-nowrap">
-                    @keykeeper.world
+                    @klawkeeper.xyz
                   </div>
                 </div>
                 

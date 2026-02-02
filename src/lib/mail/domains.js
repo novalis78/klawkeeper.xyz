@@ -15,15 +15,15 @@ const MOCK_DOMAINS = [
     addedDate: new Date(Date.now() - 1000 * 60 * 60 * 24 * 30), // 30 days ago
     dnsRecords: {
       mx: [
-        { priority: 10, host: 'mx1.keykeeper.world' },
-        { priority: 20, host: 'mx2.keykeeper.world' }
+        { priority: 10, host: 'mx1.klawkeeper.xyz' },
+        { priority: 20, host: 'mx2.klawkeeper.xyz' }
       ],
-      spf: 'v=spf1 include:_spf.keykeeper.world ~all',
+      spf: 'v=spf1 include:_spf.klawkeeper.xyz ~all',
       dkim: {
         selector: 'mail',
         record: 'v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A...'
       },
-      dmarc: 'v=DMARC1; p=quarantine; rua=mailto:dmarc@keykeeper.world'
+      dmarc: 'v=DMARC1; p=quarantine; rua=mailto:dmarc@klawkeeper.xyz'
     },
     status: 'active',
     accounts: [
@@ -100,15 +100,15 @@ export async function addDomain(userId, domainName) {
         addedDate: new Date(),
         dnsRecords: {
           mx: [
-            { priority: 10, host: 'mx1.keykeeper.world' },
-            { priority: 20, host: 'mx2.keykeeper.world' }
+            { priority: 10, host: 'mx1.klawkeeper.xyz' },
+            { priority: 20, host: 'mx2.klawkeeper.xyz' }
           ],
-          spf: 'v=spf1 include:_spf.keykeeper.world ~all',
+          spf: 'v=spf1 include:_spf.klawkeeper.xyz ~all',
           dkim: {
             selector: 'mail',
             record: 'v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A...'
           },
-          dmarc: 'v=DMARC1; p=quarantine; rua=mailto:dmarc@keykeeper.world'
+          dmarc: 'v=DMARC1; p=quarantine; rua=mailto:dmarc@klawkeeper.xyz'
         },
         status: 'pending_verification',
         accounts: []
@@ -293,13 +293,13 @@ export async function generateDnsRecords(domainName) {
     setTimeout(() => {
       const dnsRecords = {
         mx: [
-          { priority: 10, host: 'mx1.keykeeper.world', value: `10 mx1.keykeeper.world` },
-          { priority: 20, host: 'mx2.keykeeper.world', value: `20 mx2.keykeeper.world` }
+          { priority: 10, host: 'mx1.klawkeeper.xyz', value: `10 mx1.klawkeeper.xyz` },
+          { priority: 20, host: 'mx2.klawkeeper.xyz', value: `20 mx2.klawkeeper.xyz` }
         ],
         spf: {
           type: 'TXT',
           name: domainName,
-          value: 'v=spf1 include:_spf.keykeeper.world ~all'
+          value: 'v=spf1 include:_spf.klawkeeper.xyz ~all'
         },
         dkim: {
           type: 'TXT',
@@ -309,7 +309,7 @@ export async function generateDnsRecords(domainName) {
         dmarc: {
           type: 'TXT',
           name: `_dmarc.${domainName}`,
-          value: 'v=DMARC1; p=quarantine; rua=mailto:dmarc@keykeeper.world'
+          value: 'v=DMARC1; p=quarantine; rua=mailto:dmarc@klawkeeper.xyz'
         }
       };
       

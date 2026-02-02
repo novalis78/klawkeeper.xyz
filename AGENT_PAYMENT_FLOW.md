@@ -1,6 +1,6 @@
 # Agent Payment Flow
 
-KeyKeeper.world's self-service Bitcoin payment system - inspired by secure-mail-client's ingenious payment gateway!
+KlawKeeper.world's self-service Bitcoin payment system - inspired by secure-mail-client's ingenious payment gateway!
 
 ## How It Works
 
@@ -11,7 +11,7 @@ KeyKeeper.world's self-service Bitcoin payment system - inspired by secure-mail-
 ```javascript
 // 1. INITIATE PAYMENT
 // Agent discovers service and requests payment details
-const paymentRequest = await fetch('https://keykeeper.world/api/v1/agent/payment', {
+const paymentRequest = await fetch('https://klawkeeper.xyz/api/v1/agent/payment', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -41,7 +41,7 @@ const payment = await paymentRequest.json();
 // 3. POLL PAYMENT STATUS
 // Agent checks payment status every 5-10 minutes
 const checkStatus = async () => {
-  const status = await fetch(`https://keykeeper.world/api/v1/agent/payment/status/${payment.paymentToken}`);
+  const status = await fetch(`https://klawkeeper.xyz/api/v1/agent/payment/status/${payment.paymentToken}`);
   const data = await status.json();
 
   // Returns:
@@ -71,7 +71,7 @@ while (!paymentConfirmed) {
 // 4. CLAIM CREDITS
 // Once confirmed, agent claims credits
 // Option A: Create new account with credits
-const claimResponse = await fetch(`https://keykeeper.world/api/v1/agent/payment/claim/${payment.paymentToken}`, {
+const claimResponse = await fetch(`https://klawkeeper.xyz/api/v1/agent/payment/claim/${payment.paymentToken}`, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -85,14 +85,14 @@ const result = await claimResponse.json();
 //   success: true,
 //   credits: 10000,
 //   apiKey: "kk_abc123...",  // NEW API KEY!
-//   email: "agent-my-agent-id@keykeeper.world",
+//   email: "agent-my-agent-id@klawkeeper.xyz",
 //   message: "Successfully claimed 10000 credits. New agent account created.",
 //   note: "Store your API key securely - it cannot be retrieved later"
 // }
 
 // 5. USE EMAIL SERVICE
 // Agent can now send emails!
-const sendEmail = await fetch('https://keykeeper.world/api/v1/agent/send', {
+const sendEmail = await fetch('https://klawkeeper.xyz/api/v1/agent/send', {
   method: 'POST',
   headers: {
     'Authorization': `Bearer ${result.apiKey}`,
@@ -112,7 +112,7 @@ If the agent already has an API key and wants to add more credits:
 
 ```javascript
 // During claim step, provide existing API key
-const claimResponse = await fetch(`https://keykeeper.world/api/v1/agent/payment/claim/${payment.paymentToken}`, {
+const claimResponse = await fetch(`https://klawkeeper.xyz/api/v1/agent/payment/claim/${payment.paymentToken}`, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -159,7 +159,7 @@ const claimResponse = await fetch(`https://keykeeper.world/api/v1/agent/payment/
 ```javascript
 class EmailAgent {
   constructor() {
-    this.baseUrl = 'https://keykeeper.world';
+    this.baseUrl = 'https://klawkeeper.xyz';
     this.apiKey = null;
   }
 

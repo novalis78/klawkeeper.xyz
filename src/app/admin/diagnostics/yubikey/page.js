@@ -111,10 +111,10 @@ export default function YubiKeyDiagnostics() {
         
         const createOptions = {
           challenge,
-          rp: { name: "KeyKeeper YubiKey Test" },
+          rp: { name: "KlawKeeper YubiKey Test" },
           user: {
             id: new TextEncoder().encode("test-user"),
-            name: "test@keykeeper.world",
+            name: "test@klawkeeper.xyz",
             displayName: "Test User"
           },
           pubKeyCredParams: [
@@ -208,9 +208,9 @@ export default function YubiKeyDiagnostics() {
     }
   };
 
-  // Test 5: Practical KeyKeeper Integration Test
+  // Test 5: Practical KlawKeeper Integration Test
   const testKeykeeperIntegration = async () => {
-    addLog('Testing KeyKeeper YubiKey integration...');
+    addLog('Testing KlawKeeper YubiKey integration...');
     
     try {
       // Dynamically import YubiKey service to avoid SSR issues
@@ -230,7 +230,7 @@ export default function YubiKeyDiagnostics() {
       addLog('Testing registration flow...');
       try {
         const registration = await yubiKeyService.register(
-          'test@keykeeper.world',
+          'test@klawkeeper.xyz',
           'Test User'
         );
         
@@ -318,7 +318,7 @@ export default function YubiKeyDiagnostics() {
       addLog('Card info:', cardInfo);
       
     } catch (error) {
-      addLog('KeyKeeper integration test error:', error.message);
+      addLog('KlawKeeper integration test error:', error.message);
     }
   };
 
@@ -365,7 +365,7 @@ export default function YubiKeyDiagnostics() {
                   <li>WebUSB API access</li>
                   <li>WebAuthn/FIDO2 capabilities</li>
                   <li>Card information reading</li>
-                  <li>KeyKeeper integration (register + authenticate)</li>
+                  <li>KlawKeeper integration (register + authenticate)</li>
                 </ul>
                 <p className="mt-2">Make sure your YubiKey is plugged in before running tests.</p>
               </div>
@@ -410,7 +410,7 @@ export default function YubiKeyDiagnostics() {
                 }
                 try {
                   await yubiKeyService.register('quick@test.com', 'Quick Test');
-                  addLog('Success! YubiKey can be used with KeyKeeper');
+                  addLog('Success! YubiKey can be used with KlawKeeper');
                 } catch (e) {
                   addLog('Failed:', e.message);
                 }
@@ -431,7 +431,7 @@ export default function YubiKeyDiagnostics() {
                     publicKey: {
                       challenge,
                       rp: { 
-                        name: "KeyKeeper YubiKey",
+                        name: "KlawKeeper YubiKey",
                         id: window.location.hostname
                       },
                       user: {

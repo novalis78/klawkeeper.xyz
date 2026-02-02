@@ -30,7 +30,7 @@ export async function POST(request) {
     if (!agentEmail) {
       // Generate a unique email address for the agent
       const cleanAgentId = agentId.toLowerCase().replace(/[^a-z0-9]/g, '-');
-      agentEmail = `agent-${cleanAgentId}-${crypto.randomBytes(4).toString('hex')}@keykeeper.world`;
+      agentEmail = `agent-${cleanAgentId}-${crypto.randomBytes(4).toString('hex')}@klawkeeper.xyz`;
     }
 
     // Validate email format

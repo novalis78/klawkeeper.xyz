@@ -2,7 +2,7 @@
 
 ## 🎯 The Vision
 
-**KeyKeeper.world**: The first email service built for AI agents first, humans second.
+**KlawKeeper.world**: The first email service built for AI agents first, humans second.
 
 ### Core Innovation
 Autonomous AI agents can:
@@ -88,7 +88,7 @@ Provides:
 - MCP server info
 - Authentication methods
 
-Agents can autonomously discover and integrate with KeyKeeper!
+Agents can autonomously discover and integrate with KlawKeeper!
 
 ### 6. Database Schema
 Complete credit system:
@@ -142,7 +142,7 @@ Complete credit system:
 5. **MCP Server Implementation**
    - Model Context Protocol server
    - Tools: send_email, check_inbox, get_email, check_balance
-   - Endpoint: `mcp://keykeeper.world`
+   - Endpoint: `mcp://klawkeeper.xyz`
 
 6. **Custom Domain Support**
    - Allow agents to use their own domains
@@ -241,7 +241,7 @@ IMAP_PORT=993
 APP_SECRET=random-secret-for-encryption
 
 # Optional
-NEXT_PUBLIC_BASE_URL=https://keykeeper.world
+NEXT_PUBLIC_BASE_URL=https://klawkeeper.xyz
 DEFAULT_MAIL_QUOTA=1024
 ```
 
@@ -270,7 +270,7 @@ Then we can:
 
 ## 🤝 Credits
 
-Built on top of the excellent KeyKeeper foundation with inspiration from:
+Built on top of the excellent KlawKeeper foundation with inspiration from:
 - secure-mail-client's payment system
 - The broader AI agent ecosystem
 - Bitcoin's trustless verification

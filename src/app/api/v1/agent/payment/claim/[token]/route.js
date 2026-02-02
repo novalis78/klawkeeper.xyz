@@ -92,7 +92,7 @@ export async function POST(request, { params }) {
       userId = crypto.randomUUID();
       newApiKey = `kk_${crypto.randomBytes(32).toString('hex')}`;
 
-      const agentEmail = `agent-${agentId || crypto.randomBytes(4).toString('hex')}@keykeeper.world`;
+      const agentEmail = `agent-${agentId || crypto.randomBytes(4).toString('hex')}@klawkeeper.xyz`;
 
       await db.query(
         `INSERT INTO users (

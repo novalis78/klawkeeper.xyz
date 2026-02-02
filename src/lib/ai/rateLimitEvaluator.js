@@ -32,7 +32,7 @@ export async function evaluateRateLimitRequest(context) {
   } = context;
 
   // Build evaluation prompt for Claude
-  const evaluationPrompt = `You are an AI security analyst for KeyKeeper, an email service provider. Your job is to evaluate rate limit increase requests from AI agents to prevent spam and abuse while enabling legitimate use cases.
+  const evaluationPrompt = `You are an AI security analyst for KlawKeeper, an email service provider. Your job is to evaluate rate limit increase requests from AI agents to prevent spam and abuse while enabling legitimate use cases.
 
 **Request Details:**
 - User: ${userEmail}

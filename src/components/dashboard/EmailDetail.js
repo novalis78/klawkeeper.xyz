@@ -167,11 +167,11 @@ export default function EmailDetail({ message, onBack, onDelete, onReply, onForw
 
     // Security headers
     if (message.encryptedBody) {
-      lines.push(`X-KeyKeeper-Encrypted: yes`);
+      lines.push(`X-KlawKeeper-Encrypted: yes`);
     }
 
     // Custom headers
-    lines.push(`X-Mailer: KeyKeeper.world`);
+    lines.push(`X-Mailer: KlawKeeper.world`);
 
     // Empty line between headers and body
     lines.push('');

@@ -10,7 +10,7 @@ export default function SignupPage() {
   const router = useRouter();
   const [formData, setFormData] = useState({
     username: '',
-    domain: 'keykeeper.world',
+    domain: 'klawkeeper.xyz',
     name: '',
     password: '',
     confirmPassword: ''
@@ -25,7 +25,7 @@ export default function SignupPage() {
 
   // Domain options
   const domainOptions = [
-    { value: 'keykeeper.world', label: 'keykeeper.world' },
+    { value: 'klawkeeper.xyz', label: 'klawkeeper.xyz' },
     { value: 'phoneshield.ai', label: 'phoneshield.ai' }
   ];
 
@@ -166,12 +166,12 @@ export default function SignupPage() {
                 <div className="relative">
                   <img
                     src="/logo-small.png"
-                    alt="KeyKeeper"
+                    alt="KlawKeeper"
                     className="w-10 h-10 object-contain transition-all duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-teal-400/0 group-hover:bg-teal-400/30 rounded-lg blur-xl transition-all duration-300 -z-10"></div>
                 </div>
-                <span className="text-xl font-semibold text-white group-hover:text-primary-300 transition-colors">KeyKeeper</span>
+                <span className="text-xl font-semibold text-white group-hover:text-primary-300 transition-colors">KlawKeeper</span>
               </div>
             </Link>
             <h1 className="text-[44px] font-semibold mb-3 text-white leading-[1.2] tracking-[-0.02em]">Create your account</h1>

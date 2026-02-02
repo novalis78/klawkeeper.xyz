@@ -81,8 +81,8 @@ export async function POST(request) {
       customer: customerId,
       payment_method_types: ['card'],
       mode: isOneTimePayment ? 'payment' : 'subscription',
-      success_url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://keykeeper.world'}/dashboard?checkout=success&plan=${planId}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://keykeeper.world'}/pricing?checkout=cancelled`,
+      success_url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://klawkeeper.xyz'}/dashboard?checkout=success&plan=${planId}`,
+      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://klawkeeper.xyz'}/pricing?checkout=cancelled`,
       metadata: {
         userId: userId,
         planId: planId
@@ -96,7 +96,7 @@ export async function POST(request) {
         price_data: {
           currency: 'usd',
           product_data: {
-            name: `KeyKeeper ${plan.name}`,
+            name: `KlawKeeper ${plan.name}`,
             description: plan.features.join(', ')
           },
           unit_amount: plan.price
@@ -108,7 +108,7 @@ export async function POST(request) {
         price_data: {
           currency: 'usd',
           product_data: {
-            name: `KeyKeeper ${plan.name}`,
+            name: `KlawKeeper ${plan.name}`,
             description: plan.features.join(', ')
           },
           unit_amount: plan.price,

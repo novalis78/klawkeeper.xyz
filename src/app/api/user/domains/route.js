@@ -227,20 +227,20 @@ function getDNSRecords(domain, verificationToken) {
     {
       type: 'MX',
       name: '@',
-      value: 'mail.keykeeper.world',
+      value: 'mail.klawkeeper.xyz',
       priority: 10,
       description: 'Mail server record'
     },
     {
       type: 'TXT',
       name: '@',
-      value: `v=spf1 include:keykeeper.world ~all`,
+      value: `v=spf1 include:klawkeeper.xyz ~all`,
       description: 'SPF record for email authentication'
     },
     {
       type: 'TXT',
       name: '_dmarc',
-      value: `v=DMARC1; p=quarantine; rua=mailto:dmarc@keykeeper.world`,
+      value: `v=DMARC1; p=quarantine; rua=mailto:dmarc@klawkeeper.xyz`,
       description: 'DMARC policy'
     },
     {
@@ -252,7 +252,7 @@ function getDNSRecords(domain, verificationToken) {
     {
       type: 'CNAME',
       name: 'mail',
-      value: 'mail.keykeeper.world',
+      value: 'mail.klawkeeper.xyz',
       description: 'Mail subdomain'
     }
   ];

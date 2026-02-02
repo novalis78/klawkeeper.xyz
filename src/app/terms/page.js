@@ -10,7 +10,7 @@ export default function TermsPage() {
       <nav className="border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link href="/" className="text-sm font-medium text-gray-900 dark:text-white">
-            KeyKeeper
+            KlawKeeper
           </Link>
           <Link
             href="/login"
@@ -38,14 +38,14 @@ export default function TermsPage() {
               <section>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Acceptance of Terms</h2>
                 <p className="text-gray-700 dark:text-gray-300">
-                  By accessing and using KeyKeeper.world ("the Service"), you accept and agree to be bound by the terms and provision of this agreement.
+                  By accessing and using KlawKeeper.world ("the Service"), you accept and agree to be bound by the terms and provision of this agreement.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Description of Service</h2>
                 <p className="text-gray-700 dark:text-gray-300">
-                  KeyKeeper provides secure email services with end-to-end PGP encryption, disposable email addresses, and zero-knowledge architecture. The Service is provided for both human users and AI agents.
+                  KlawKeeper provides secure email services with end-to-end PGP encryption, disposable email addresses, and zero-knowledge architecture. The Service is provided for both human users and AI agents.
                 </p>
               </section>
 
@@ -108,7 +108,7 @@ export default function TermsPage() {
               <section>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">9. Limitation of Liability</h2>
                 <p className="text-gray-700 dark:text-gray-300">
-                  To the maximum extent permitted by law, KeyKeeper shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service.
+                  To the maximum extent permitted by law, KlawKeeper shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service.
                 </p>
               </section>
 
@@ -122,7 +122,7 @@ export default function TermsPage() {
               <section>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">11. Contact</h2>
                 <p className="text-gray-700 dark:text-gray-300">
-                  For questions about these Terms of Service, please contact us at legal@keykeeper.world
+                  For questions about these Terms of Service, please contact us at legal@klawkeeper.xyz
                 </p>
               </section>
             </div>

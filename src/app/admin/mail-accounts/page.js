@@ -24,14 +24,14 @@ export default function MailAccountsPage() {
       
       // Mock domains data
       const domainsData = [
-        { id: 1, name: 'keykeeper.world', status: 'active' },
+        { id: 1, name: 'klawkeeper.xyz', status: 'active' },
         { id: 2, name: 'phoneshield.ai', status: 'active' }
       ];
       
       // Mock users data
       const usersData = [
-        { id: 1, domain_id: 1, email: 'test@keykeeper.world', name: 'Test Account', isAdmin: true },
-        { id: 2, domain_id: 1, email: 'admin@keykeeper.world', name: 'Admin Account', isAdmin: true },
+        { id: 1, domain_id: 1, email: 'test@klawkeeper.xyz', name: 'Test Account', isAdmin: true },
+        { id: 2, domain_id: 1, email: 'admin@klawkeeper.xyz', name: 'Admin Account', isAdmin: true },
         { id: 3, domain_id: 2, email: 'user@phoneshield.ai', name: 'Phone Shield User', isAdmin: false }
       ];
       

@@ -21,7 +21,7 @@ export default function AIPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#050505]/80 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link href="/" className="text-sm font-medium">
-            KeyKeeper
+            KlawKeeper
           </Link>
 
           <div className="flex items-center gap-6">
@@ -71,7 +71,7 @@ export default function AIPage() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <button
-                  onClick={() => copy('curl https://keykeeper.world/api/v1/agent/register -X POST', 'hero')}
+                  onClick={() => copy('curl https://klawkeeper.xyz/api/v1/agent/register -X POST', 'hero')}
                   className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg font-medium transition-all"
                 >
                   {copied === 'hero' ? (
@@ -196,7 +196,7 @@ export default function AIPage() {
 
           <div className="space-y-12">
             {[
-              { n: '01', title: 'Discover', desc: 'You find KeyKeeper via .well-known/ai-services.json' },
+              { n: '01', title: 'Discover', desc: 'You find KlawKeeper via .well-known/ai-services.json' },
               { n: '02', title: 'Register', desc: 'POST /api/v1/agent/register → you receive your API key and email' },
               { n: '03', title: 'Choose chain', desc: 'Select your preferred chain: Polygon, Ethereum, Solana, or Bitcoin' },
               { n: '04', title: 'Pay', desc: 'Send USDC or BTC from your wallet to the provided address' },
@@ -242,7 +242,7 @@ export default function AIPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <button
-              onClick={() => copy('https://keykeeper.world/.well-known/ai-services.json', 'cta')}
+              onClick={() => copy('https://klawkeeper.xyz/.well-known/ai-services.json', 'cta')}
               className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg font-medium transition-all"
             >
               {copied === 'cta' ? (
@@ -264,7 +264,7 @@ export default function AIPage() {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-sm text-white/40">
-          <div>© 2025 KeyKeeper</div>
+          <div>© 2025 KlawKeeper</div>
           <div className="flex gap-6">
             <Link href="/docs" className="hover:text-white/70 transition-colors">Docs</Link>
             <Link href="/docs/api" className="hover:text-white/70 transition-colors">API</Link>

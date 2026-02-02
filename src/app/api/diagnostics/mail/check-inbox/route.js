@@ -26,7 +26,7 @@ export async function POST(request) {
     }
     
     // Default values for server settings if not provided
-    const imapServer = server || process.env.MAIL_HOST || 'mail.keykeeper.world';
+    const imapServer = server || process.env.MAIL_HOST || 'mail.klawkeeper.xyz';
     const imapPort = port || parseInt(process.env.MAIL_IMAP_PORT || '993');
     const imapSecure = secure !== undefined ? secure : process.env.MAIL_IMAP_SECURE !== 'false';
     

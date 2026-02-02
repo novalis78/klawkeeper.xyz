@@ -106,7 +106,7 @@ export default function APIDocsPage() {
         <div className="h-full px-6 flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center gap-8">
             <Link href="/" className="text-sm font-medium">
-              KeyKeeper
+              KlawKeeper
             </Link>
             <span className="text-white/40 text-sm">API Documentation</span>
           </div>
@@ -198,7 +198,7 @@ export default function APIDocsPage() {
             </p>
             <div className="bg-white/[0.03] border border-white/10 rounded-xl p-4">
               <p className="text-sm text-white/80">
-                <strong>Base URL:</strong> <code className="bg-white/10 px-2 py-1 rounded text-white">https://keykeeper.world/api</code>
+                <strong>Base URL:</strong> <code className="bg-white/10 px-2 py-1 rounded text-white">https://klawkeeper.xyz/api</code>
               </p>
             </div>
           </section>
@@ -214,7 +214,7 @@ export default function APIDocsPage() {
             <CodeBlock
               id="auth-example"
               language="bash"
-              code={`curl https://keykeeper.world/api/v1/agent/balance \\
+              code={`curl https://klawkeeper.xyz/api/v1/agent/balance \\
   -H "Authorization: Bearer YOUR_API_KEY"`}
             />
           </section>
@@ -225,7 +225,7 @@ export default function APIDocsPage() {
               Quick Start
             </h2>
             <p className="text-white/60 mb-6">
-              Get started with KeyKeeper in three simple steps:
+              Get started with KlawKeeper in three simple steps:
             </p>
 
             <div className="space-y-6">
@@ -237,7 +237,7 @@ export default function APIDocsPage() {
                 <CodeBlock
                   id="quickstart-1"
                   language="javascript"
-                  code={`const response = await fetch('https://keykeeper.world/api/v1/agent/register', {
+                  code={`const response = await fetch('https://klawkeeper.xyz/api/v1/agent/register', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -260,7 +260,7 @@ const { apiKey, email } = await response.json();
                   id="quickstart-2"
                   language="javascript"
                   code={`// Initiate payment with your preferred chain
-const payment = await fetch('https://keykeeper.world/api/v1/agent/payment', {
+const payment = await fetch('https://klawkeeper.xyz/api/v1/agent/payment', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -273,7 +273,7 @@ const { paymentToken, depositAddress, amount, token } = await payment.json();
 
 // Send USDC (or BTC) to the address, then poll for confirmation
 // Once confirmed, claim your credits
-const claim = await fetch(\`https://keykeeper.world/api/v1/agent/payment/claim/\${paymentToken}\`, {
+const claim = await fetch(\`https://klawkeeper.xyz/api/v1/agent/payment/claim/\${paymentToken}\`, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ apiKey })
@@ -289,7 +289,7 @@ const claim = await fetch(\`https://keykeeper.world/api/v1/agent/payment/claim/\
                 <CodeBlock
                   id="quickstart-3"
                   language="javascript"
-                  code={`const send = await fetch('https://keykeeper.world/api/v1/agent/send', {
+                  code={`const send = await fetch('https://klawkeeper.xyz/api/v1/agent/send', {
   method: 'POST',
   headers: {
     'Authorization': \`Bearer \${apiKey}\`,
@@ -297,7 +297,7 @@ const claim = await fetch(\`https://keykeeper.world/api/v1/agent/payment/claim/\
   },
   body: JSON.stringify({
     to: 'user@example.com',
-    subject: 'Hello from KeyKeeper',
+    subject: 'Hello from KlawKeeper',
     body: 'This email was sent autonomously by my AI agent!'
   })
 });
@@ -315,7 +315,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
               MCP Server
             </h2>
             <p className="text-white/60 mb-8">
-              KeyKeeper provides a Model Context Protocol (MCP) server for seamless AI agent integration.
+              KlawKeeper provides a Model Context Protocol (MCP) server for seamless AI agent integration.
             </p>
 
             {/* What is MCP */}
@@ -325,12 +325,12 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
               </h3>
               <p className="text-white/60 mb-4">
                 The Model Context Protocol (MCP) is a standardized protocol that allows AI agents to discover
-                and interact with external services. KeyKeeper's MCP server provides native support for email
+                and interact with external services. KlawKeeper's MCP server provides native support for email
                 operations without requiring agents to understand REST APIs.
               </p>
               <div className="bg-white/[0.03] border border-white/10 rounded-xl p-4 mb-4">
                 <p className="text-sm text-white/80">
-                  <strong>MCP Endpoint:</strong> <code className="bg-white/10 px-2 py-1 rounded text-white">https://keykeeper.world/api/mcp</code>
+                  <strong>MCP Endpoint:</strong> <code className="bg-white/10 px-2 py-1 rounded text-white">https://klawkeeper.xyz/api/mcp</code>
                 </p>
               </div>
             </div>
@@ -350,7 +350,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
                   <CodeBlock
                     id="mcp-capabilities"
                     language="bash"
-                    code={`curl https://keykeeper.world/api/mcp`}
+                    code={`curl https://klawkeeper.xyz/api/mcp`}
                   />
                 </div>
 
@@ -362,7 +362,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
                   <CodeBlock
                     id="mcp-tools-list"
                     language="bash"
-                    code={`curl -X POST https://keykeeper.world/api/mcp \\
+                    code={`curl -X POST https://klawkeeper.xyz/api/mcp \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{"method": "tools/list"}'`}
@@ -377,7 +377,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
                   <CodeBlock
                     id="mcp-call-tool"
                     language="bash"
-                    code={`curl -X POST https://keykeeper.world/api/mcp \\
+                    code={`curl -X POST https://klawkeeper.xyz/api/mcp \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
@@ -402,7 +402,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
                 Available Tools
               </h3>
               <p className="text-white/60 mb-6">
-                KeyKeeper's MCP server provides four tools for email operations:
+                KlawKeeper's MCP server provides four tools for email operations:
               </p>
 
               <div className="space-y-6">
@@ -495,7 +495,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
                   <strong>Full MCP Documentation:</strong> For complete MCP integration guides,
                   examples in multiple languages, and protocol specifications, see the{' '}
                   <a
-                    href="https://github.com/novalis78/keykeeper.world/blob/master/MCP_DOCUMENTATION.md"
+                    href="https://github.com/novalis78/klawkeeper.xyz/blob/master/MCP_DOCUMENTATION.md"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline hover:text-white transition-colors"
@@ -529,7 +529,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
               <CodeBlock
                 id="discovery-example"
                 language="bash"
-                code={`curl https://keykeeper.world/.well-known/ai-services.json`}
+                code={`curl https://klawkeeper.xyz/.well-known/ai-services.json`}
               />
             </div>
 
@@ -565,7 +565,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
                 code={`{
   "success": true,
   "apiKey": "kk_abc123...",
-  "email": "agent-my-agent-name@keykeeper.world",
+  "email": "agent-my-agent-name@klawkeeper.xyz",
   "userId": "uuid-here",
   "credits": 0
 }`}
@@ -605,7 +605,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
                 language="json"
                 code={`{
   "success": true,
-  "messageId": "<abc123@keykeeper.world>",
+  "messageId": "<abc123@klawkeeper.xyz>",
   "creditsRemaining": 999.0,
   "message": "Email sent successfully"
 }`}
@@ -681,7 +681,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
   "id": "12345",
   "from": "sender@example.com",
   "fromName": "Sender Name",
-  "to": ["you@keykeeper.world"],
+  "to": ["you@klawkeeper.xyz"],
   "subject": "Message subject",
   "date": "2025-01-21T10:30:00Z",
   "body": {
@@ -719,7 +719,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
                 language="json"
                 code={`{
   "credits": 9999.0,
-  "email": "agent-my-agent@keykeeper.world",
+  "email": "agent-my-agent@klawkeeper.xyz",
   "accountStatus": "active"
 }`}
               />
@@ -732,7 +732,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
               Payment System
             </h2>
             <p className="text-white/60 mb-8">
-              KeyKeeper supports multiple payment methods for maximum flexibility. Choose your preferred blockchain:
+              KlawKeeper supports multiple payment methods for maximum flexibility. Choose your preferred blockchain:
             </p>
 
             {/* Payment Options Overview */}
@@ -927,7 +927,7 @@ console.log(\`Email sent! Credits remaining: \${result.creditsRemaining}\`);`}
   "success": true,
   "credits": 10000,
   "apiKey": "kk_new_key...",  // if new account
-  "email": "agent-my-agent@keykeeper.world",
+  "email": "agent-my-agent@klawkeeper.xyz",
   "message": "Successfully claimed 10000 credits"
 }`}
               />

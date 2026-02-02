@@ -1,7 +1,7 @@
-# KeyKeeper.world API Documentation
+# KlawKeeper.world API Documentation
 
 **Version:** 1.0.0
-**Base URL:** `https://keykeeper.world/api` (or `https://api.keykeeper.world`)
+**Base URL:** `https://klawkeeper.xyz/api` (or `https://api.klawkeeper.xyz`)
 **Authentication:** Bearer token (API Key)
 
 ---
@@ -23,10 +23,10 @@
 
 ```javascript
 // 1. Discover the service
-const discovery = await fetch('https://keykeeper.world/.well-known/ai-services.json');
+const discovery = await fetch('https://klawkeeper.xyz/.well-known/ai-services.json');
 
 // 2. Register as an agent (or pay for credits first)
-const register = await fetch('https://keykeeper.world/api/v1/agent/register', {
+const register = await fetch('https://klawkeeper.xyz/api/v1/agent/register', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ agentId: 'my-agent' })
@@ -34,7 +34,7 @@ const register = await fetch('https://keykeeper.world/api/v1/agent/register', {
 const { apiKey, email } = await register.json();
 
 // 3. Send an email
-const send = await fetch('https://keykeeper.world/api/v1/agent/send', {
+const send = await fetch('https://klawkeeper.xyz/api/v1/agent/send', {
   method: 'POST',
   headers: {
     'Authorization': `Bearer ${apiKey}`,
@@ -94,10 +94,10 @@ Returns comprehensive service information including API endpoints, pricing, and 
 **Response:**
 ```json
 {
-  "name": "KeyKeeper Email Infrastructure",
+  "name": "KlawKeeper Email Infrastructure",
   "apis": {
     "rest": {
-      "baseUrl": "https://keykeeper.world/api",
+      "baseUrl": "https://klawkeeper.xyz/api",
       "endpoints": { ... }
     }
   },
@@ -130,7 +130,7 @@ Register a new AI agent account. Returns API key and email address. Starts with 
 {
   "success": true,
   "apiKey": "kk_abc123...",
-  "email": "agent-my-agent-name-a1b2c3@keykeeper.world",
+  "email": "agent-my-agent-name-a1b2c3@klawkeeper.xyz",
   "userId": "uuid-here",
   "credits": 0,
   "note": "Store your API key securely - it cannot be retrieved later."
@@ -169,7 +169,7 @@ Send an email. Deducts 1.0 credits from your balance.
 ```json
 {
   "success": true,
-  "messageId": "<abc123@keykeeper.world>",
+  "messageId": "<abc123@klawkeeper.xyz>",
   "creditsRemaining": 999.0,
   "message": "Email sent successfully"
 }
@@ -242,7 +242,7 @@ Retrieve full content of a specific email by ID.
   "id": "12345",
   "from": "sender@example.com",
   "fromName": "Sender Name",
-  "to": ["you@keykeeper.world"],
+  "to": ["you@klawkeeper.xyz"],
   "subject": "Message subject",
   "date": "2025-01-21T10:30:00Z",
   "body": {
@@ -287,7 +287,7 @@ Check your current credit balance.
 ```json
 {
   "credits": 9999.0,
-  "email": "agent-my-agent@keykeeper.world",
+  "email": "agent-my-agent@klawkeeper.xyz",
   "accountStatus": "active"
 }
 ```
@@ -434,7 +434,7 @@ Claim credits after payment is confirmed. Can create new account or add to exist
   "success": true,
   "credits": 10000,
   "apiKey": "kk_new_api_key...",
-  "email": "agent-my-agent@keykeeper.world",
+  "email": "agent-my-agent@klawkeeper.xyz",
   "message": "Successfully claimed 10000 credits. New agent account created.",
   "note": "Store your API key securely - it cannot be retrieved later"
 }
@@ -542,7 +542,7 @@ Setup two-factor authentication (TOTP).
 ```json
 {
   "secret": "BASE32SECRET",
-  "qrCodeUrl": "otpauth://totp/KeyKeeper:user@example.com?secret=...",
+  "qrCodeUrl": "otpauth://totp/KlawKeeper:user@example.com?secret=...",
   "message": "Scan the QR code with your authenticator app, then verify with a code to enable 2FA"
 }
 ```
@@ -680,10 +680,10 @@ We encourage community contributions! Submit your SDK via GitHub.
 
 ## Support
 
-- **Documentation:** https://keykeeper.world/docs/api
-- **API Status:** https://status.keykeeper.world
-- **Support Email:** support@keykeeper.world
-- **GitHub Issues:** https://github.com/novalis78/keykeeper.world/issues
+- **Documentation:** https://klawkeeper.xyz/docs/api
+- **API Status:** https://status.klawkeeper.xyz
+- **Support Email:** support@klawkeeper.xyz
+- **GitHub Issues:** https://github.com/novalis78/klawkeeper.xyz/issues
 
 ---
 

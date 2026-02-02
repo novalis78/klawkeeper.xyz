@@ -30,7 +30,7 @@ export default function ExternalOnlyTest() {
         publicKey: {
           challenge: crypto.getRandomValues(new Uint8Array(32)),
           rp: { 
-            name: "KeyKeeper External Only",
+            name: "KlawKeeper External Only",
             id: window.location.hostname
           },
           user: {
@@ -109,7 +109,7 @@ export default function ExternalOnlyTest() {
         publicKey: {
           challenge: crypto.getRandomValues(new Uint8Array(32)),
           rp: { 
-            name: "KeyKeeper No Platform",
+            name: "KlawKeeper No Platform",
             id: window.location.hostname
           },
           user: {

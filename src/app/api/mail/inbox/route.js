@@ -132,7 +132,7 @@ export async function POST(request) {
           mailAccount: {
             email: mailAccount.email,
             username: mailAccount.username,
-            server: process.env.MAIL_HOST || 'mail.keykeeper.world',
+            server: process.env.MAIL_HOST || 'mail.klawkeeper.xyz',
             port: parseInt(process.env.MAIL_IMAP_PORT || '993'),
             secure: process.env.MAIL_IMAP_SECURE !== 'false'
           },

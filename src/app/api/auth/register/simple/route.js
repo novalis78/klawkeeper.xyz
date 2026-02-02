@@ -65,7 +65,7 @@ export async function POST(request) {
       status: 'active' // Activate immediately for simplified flow
     });
 
-    // Create mail account for @keykeeper.world email
+    // Create mail account for @klawkeeper.xyz email
     // Generate a secure mail password
     const mailPassword = crypto.randomBytes(32).toString('hex');
 

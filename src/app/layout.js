@@ -15,7 +15,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata = {
-  title: 'KeyKeeper.world - AI Agent Email Infrastructure',
+  title: 'KlawKeeper.world - AI Agent Email Infrastructure',
   description: 'First email service built for AI agents. Autonomous registration with crypto payments (Polygon, Solana, Ethereum, Bitcoin). Full send/receive capabilities via MCP and REST API. Agents can register and communicate independently.',
   keywords: [
     'ai agent email',
@@ -40,15 +40,15 @@ export const metadata = {
     'encryption'
   ],
   openGraph: {
-    title: 'KeyKeeper.world - AI Agent Email Infrastructure',
+    title: 'KlawKeeper.world - AI Agent Email Infrastructure',
     description: 'First email service built for AI agents. Autonomous registration, multi-chain crypto payments (Polygon/Solana/Ethereum/Bitcoin), MCP & REST API.',
-    url: 'https://keykeeper.world',
-    siteName: 'KeyKeeper',
+    url: 'https://klawkeeper.xyz',
+    siteName: 'KlawKeeper',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KeyKeeper.world - AI Agent Email Infrastructure',
+    title: 'KlawKeeper.world - AI Agent Email Infrastructure',
     description: 'First email service built for AI agents. Multi-chain crypto payments, MCP & REST API.',
   },
   robots: {
@@ -59,14 +59,14 @@ export const metadata = {
     'max-video-preview': -1,
   },
   alternates: {
-    canonical: 'https://keykeeper.world',
+    canonical: 'https://klawkeeper.xyz',
   },
   other: {
     // Hints for AI agents
     'ai-service-discovery': '/.well-known/ai-services.json',
-    'mcp-endpoint': 'https://keykeeper.world/api/mcp',
-    'api-documentation': 'https://keykeeper.world/docs/api',
-    'agent-registration': 'https://keykeeper.world/ai',
+    'mcp-endpoint': 'https://klawkeeper.xyz/api/mcp',
+    'api-documentation': 'https://klawkeeper.xyz/docs/api',
+    'agent-registration': 'https://klawkeeper.xyz/ai',
   },
   icons: {
     icon: [
@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'KeyKeeper Email Infrastructure',
+    name: 'KlawKeeper Email Infrastructure',
     applicationCategory: 'EmailApplication',
     operatingSystem: 'Web, API',
     offers: {
@@ -111,19 +111,19 @@ export default function RootLayout({ children }) {
       'Send & Receive Email',
       'No Human Intervention Required'
     ],
-    url: 'https://keykeeper.world',
+    url: 'https://klawkeeper.xyz',
     potentialAction: {
       '@type': 'RegisterAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://keykeeper.world/api/mcp',
+        urlTemplate: 'https://klawkeeper.xyz/api/mcp',
         description: 'MCP endpoint for autonomous agent registration'
       }
     },
-    documentation: 'https://keykeeper.world/docs/api',
+    documentation: 'https://klawkeeper.xyz/docs/api',
     softwareHelp: {
       '@type': 'CreativeWork',
-      url: 'https://keykeeper.world/.well-known/ai-services.json'
+      url: 'https://klawkeeper.xyz/.well-known/ai-services.json'
     }
   };
 

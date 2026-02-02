@@ -8,7 +8,7 @@ export default function YubiKeySigningTest() {
   const [publicKeyData, setPublicKeyData] = useState(null);
   const [signatures, setSignatures] = useState([]);
   const [logs, setLogs] = useState([]);
-  const [dataToSign, setDataToSign] = useState('Hello, KeyKeeper!');
+  const [dataToSign, setDataToSign] = useState('Hello, KlawKeeper!');
 
   const log = (message, data = null) => {
     const entry = {
@@ -65,12 +65,12 @@ export default function YubiKeySigningTest() {
         publicKey: {
           challenge: challenge,
           rp: { 
-            name: "KeyKeeper Signing Test",
+            name: "KlawKeeper Signing Test",
             id: window.location.hostname
           },
           user: {
             id: new TextEncoder().encode('test-user-' + Date.now()),
-            name: 'test@keykeeper.world',
+            name: 'test@klawkeeper.xyz',
             displayName: 'Test User'
           },
           pubKeyCredParams: [

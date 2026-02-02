@@ -166,12 +166,12 @@ export default function DashboardLayout({ children, onInboxClick }) {
             <div className="relative">
               <img
                 src="/logo-small.png"
-                alt="KeyKeeper"
+                alt="KlawKeeper"
                 className="h-8 w-8 object-contain transition-all duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-teal-400/0 group-hover:bg-teal-400/30 rounded-lg blur-xl transition-all duration-300 -z-10"></div>
             </div>
-            <span className="text-lg font-bold text-white group-hover:text-primary-300 transition-colors">KeyKeeper</span>
+            <span className="text-lg font-bold text-white group-hover:text-primary-300 transition-colors">KlawKeeper</span>
           </Link>
           <button 
             type="button" 

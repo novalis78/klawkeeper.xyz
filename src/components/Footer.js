@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="flex items-center">
               <LockClosedIcon className="h-8 w-8 text-primary-600" />
-              <span className="ml-2 text-xl font-bold text-primary-800 dark:text-white">KeyKeeper.world</span>
+              <span className="ml-2 text-xl font-bold text-primary-800 dark:text-white">KlawKeeper.world</span>
             </div>
             <p className="text-sm leading-6 text-gray-600 dark:text-gray-300">
               Secure email services powered by OpenPGP. Your keys, your mail, your privacy.
@@ -134,7 +134,7 @@ export default function Footer() {
         </div>
         <div className="mt-16 border-t border-gray-900/10 dark:border-white/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-500 dark:text-gray-400">
-            &copy; {new Date().getFullYear()} KeyKeeper.world. All rights reserved.
+            &copy; {new Date().getFullYear()} KlawKeeper.world. All rights reserved.
           </p>
         </div>
       </div>

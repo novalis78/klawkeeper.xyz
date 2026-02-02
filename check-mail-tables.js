@@ -93,9 +93,9 @@ async function checkMailTables() {
     const [domains] = await connection.query('SELECT * FROM virtual_domains');
     if (domains.length === 0) {
       console.log('   ⚠️  No domains found!');
-      console.log('   Creating keykeeper.world domain...');
-      await connection.query("INSERT INTO virtual_domains (name) VALUES ('keykeeper.world')");
-      console.log('   ✅ Added keykeeper.world');
+      console.log('   Creating klawkeeper.xyz domain...');
+      await connection.query("INSERT INTO virtual_domains (name) VALUES ('klawkeeper.xyz')");
+      console.log('   ✅ Added klawkeeper.xyz');
     } else {
       console.log('   Domains:', domains.map(d => `${d.name} (ID: ${d.id})`).join(', '));
     }

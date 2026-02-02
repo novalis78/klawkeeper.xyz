@@ -155,13 +155,13 @@ function ResetPasswordContent() {
       {/* Logo and brand */}
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link href="/" className="flex justify-center">
-          <span className="sr-only">KeyKeeper</span>
+          <span className="sr-only">KlawKeeper</span>
           <div className="h-14 w-14 rounded-full bg-primary-600 flex items-center justify-center">
             <LockClosedIcon className="h-8 w-8 text-white" />
           </div>
         </Link>
         <h1 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">
-          KeyKeeper.world
+          KlawKeeper.world
         </h1>
         <p className="mt-2 text-center text-xl text-gray-600 dark:text-gray-400">
           Reset your password

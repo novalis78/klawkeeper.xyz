@@ -1,5 +1,5 @@
 /**
- * YubiKey integration for KeyKeeper
+ * YubiKey integration for KlawKeeper
  * 
  * This module provides YubiKey support for authentication using WebAuthn
  * and derives passwords compatible with the existing auth system
@@ -75,7 +75,7 @@ export class YubiKeyService {
       publicKey: {
         challenge,
         rp: {
-          name: "KeyKeeper",
+          name: "KlawKeeper",
           id: window.location.hostname
         },
         user: {

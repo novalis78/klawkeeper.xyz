@@ -28,10 +28,10 @@ export default function SimpleYubiKeyTest() {
       // Minimal options - let browser handle defaults
       const publicKey = {
         challenge,
-        rp: { name: "KeyKeeper" },
+        rp: { name: "KlawKeeper" },
         user: {
           id: new Uint8Array(16),
-          name: "test@keykeeper.world",
+          name: "test@klawkeeper.xyz",
           displayName: "Test User"
         },
         pubKeyCredParams: [{ alg: -7, type: "public-key" }],

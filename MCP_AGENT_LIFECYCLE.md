@@ -2,7 +2,7 @@
 
 ## Overview
 
-KeyKeeper's MCP server provides a **complete autonomous agent lifecycle** - agents can discover, register, pay, and use email services entirely through the Model Context Protocol without any external dependencies or human intervention.
+KlawKeeper's MCP server provides a **complete autonomous agent lifecycle** - agents can discover, register, pay, and use email services entirely through the Model Context Protocol without any external dependencies or human intervention.
 
 ## The Full Lifecycle
 
@@ -198,7 +198,7 @@ console.log(`Email sent! Credits remaining: ${result.creditsRemaining}`);
 - **Language agnostic** - works with any MCP client
 - **Future-proof** - new tools added without breaking changes
 
-### For KeyKeeper
+### For KlawKeeper
 - **Dual interface** - both REST and MCP use same backend
 - **No duplication** - tools call existing service functions
 - **Easier maintenance** - one source of truth
@@ -251,7 +251,7 @@ Planned MCP tools:
 ## Documentation
 
 - **Full MCP Docs:** `MCP_DOCUMENTATION.md`
-- **REST API Docs:** `https://keykeeper.world/docs/api`
+- **REST API Docs:** `https://klawkeeper.xyz/docs/api`
 - **Payment Flow:** `AGENT_PAYMENT_FLOW.md`
 - **API Spec:** `API_DOCUMENTATION.md`
 
@@ -259,7 +259,7 @@ Planned MCP tools:
 
 ### Test Registration (No Auth)
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Content-Type: application/json" \
   -d '{
     "method": "tools/call",
@@ -274,7 +274,7 @@ curl -X POST https://keykeeper.world/api/mcp \
 
 ### Test Payment Initiation (No Auth)
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Content-Type: application/json" \
   -d '{
     "method": "tools/call",
@@ -289,7 +289,7 @@ curl -X POST https://keykeeper.world/api/mcp \
 
 ### Test Email Send (Requires Auth)
 ```bash
-curl -X POST https://keykeeper.world/api/mcp \
+curl -X POST https://klawkeeper.xyz/api/mcp \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -307,7 +307,7 @@ curl -X POST https://keykeeper.world/api/mcp \
 
 ## Conclusion
 
-KeyKeeper's MCP implementation provides the **first truly autonomous agent email service**:
+KlawKeeper's MCP implementation provides the **first truly autonomous agent email service**:
 
 ✅ **Complete lifecycle** - Discovery → Registration → Payment → Usage
 ✅ **No human intervention** - Fully autonomous from start to finish

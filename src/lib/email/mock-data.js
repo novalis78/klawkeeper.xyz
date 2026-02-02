@@ -6,7 +6,7 @@
 export const mockDisposableAddresses = [
   {
     id: '1',
-    address: 'alpha7391@keykeeper.world',
+    address: 'alpha7391@klawkeeper.xyz',
     created: '2025-04-25T10:32:15Z',
     expires: '2025-05-25T10:32:15Z',
     forwardTo: 'user@example.com',
@@ -16,7 +16,7 @@ export const mockDisposableAddresses = [
   },
   {
     id: '2',
-    address: 'beta8312@keykeeper.world',
+    address: 'beta8312@klawkeeper.xyz',
     created: '2025-04-20T14:43:22Z',
     expires: '2025-05-20T14:43:22Z',
     forwardTo: 'user@example.com',
@@ -26,7 +26,7 @@ export const mockDisposableAddresses = [
   },
   {
     id: '3',
-    address: 'gamma5519@keykeeper.world',
+    address: 'gamma5519@klawkeeper.xyz',
     created: '2025-04-10T08:12:49Z',
     expires: '2025-04-10T08:12:49Z',
     forwardTo: 'user@example.com',
@@ -36,7 +36,7 @@ export const mockDisposableAddresses = [
   },
   {
     id: '4',
-    address: 'delta1167@keykeeper.world',
+    address: 'delta1167@klawkeeper.xyz',
     created: '2025-04-28T16:51:33Z',
     expires: '2026-04-28T16:51:33Z',
     forwardTo: 'user@example.com',
@@ -57,7 +57,7 @@ export const mockMessages = [
     },
     to: {
       name: 'User',
-      email: 'alpha7391@keykeeper.world'
+      email: 'alpha7391@klawkeeper.xyz'
     },
     timestamp: '2025-04-29T09:12:42Z',
     encryptedBody: true, // Indicates message is PGP encrypted
@@ -75,7 +75,7 @@ export const mockMessages = [
     },
     to: {
       name: 'User',
-      email: 'beta8312@keykeeper.world'
+      email: 'beta8312@klawkeeper.xyz'
     },
     timestamp: '2025-04-29T07:23:15Z',
     encryptedBody: true,
@@ -93,7 +93,7 @@ export const mockMessages = [
     },
     to: {
       name: 'User',
-      email: 'gamma5519@keykeeper.world'
+      email: 'gamma5519@klawkeeper.xyz'
     },
     timestamp: '2025-04-28T15:45:33Z',
     encryptedBody: true,
@@ -116,7 +116,7 @@ export const mockMessages = [
     },
     to: {
       name: 'User',
-      email: 'alpha7391@keykeeper.world'
+      email: 'alpha7391@klawkeeper.xyz'
     },
     timestamp: '2025-04-28T12:32:19Z',
     encryptedBody: true,
@@ -134,7 +134,7 @@ export const mockMessages = [
     },
     to: {
       name: 'User',
-      email: 'alpha7391@keykeeper.world'
+      email: 'alpha7391@klawkeeper.xyz'
     },
     timestamp: '2025-04-27T19:11:05Z',
     encryptedBody: true,

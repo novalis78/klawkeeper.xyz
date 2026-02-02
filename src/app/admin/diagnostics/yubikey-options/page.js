@@ -17,10 +17,10 @@ export default function YubiKeyOptionsTest() {
       const credential = await navigator.credentials.create({
         publicKey: {
           challenge: new TextEncoder().encode('keykeeper-static-challenge'),
-          rp: { name: "KeyKeeper", id: window.location.hostname },
+          rp: { name: "KlawKeeper", id: window.location.hostname },
           user: {
-            id: new TextEncoder().encode('test@keykeeper.world'),
-            name: 'test@keykeeper.world',
+            id: new TextEncoder().encode('test@klawkeeper.xyz'),
+            name: 'test@klawkeeper.xyz',
             displayName: 'Test User'
           },
           pubKeyCredParams: [{ alg: -7, type: "public-key" }],
@@ -57,7 +57,7 @@ export default function YubiKeyOptionsTest() {
       const credential = await navigator.credentials.create({
         publicKey: {
           challenge: crypto.getRandomValues(new Uint8Array(32)),
-          rp: { name: "KeyKeeper Storage Test" },
+          rp: { name: "KlawKeeper Storage Test" },
           user: {
             id: crypto.getRandomValues(new Uint8Array(16)),
             name: 'storage@test.com',
@@ -109,7 +109,7 @@ export default function YubiKeyOptionsTest() {
       const serial = device.serialNumber;
       
       // Use serial + user email to derive a unique key
-      const data = new TextEncoder().encode(serial + ':test@keykeeper.world');
+      const data = new TextEncoder().encode(serial + ':test@klawkeeper.xyz');
       const hash = await crypto.subtle.digest('SHA-256', data);
       const derived = btoa(String.fromCharCode(...new Uint8Array(hash)));
 
@@ -140,7 +140,7 @@ export default function YubiKeyOptionsTest() {
           'Works in all modern browsers',
           'No special permissions needed',
           'Maintains security of YubiKey auth',
-          'Compatible with existing KeyKeeper architecture'
+          'Compatible with existing KlawKeeper architecture'
         ]
       }
     });
@@ -277,7 +277,7 @@ export default function YubiKeyOptionsTest() {
           </div>
 
           <div className="mt-8 p-4 bg-blue-900/30 rounded-lg border border-blue-700">
-            <h3 className="text-blue-300 font-semibold mb-2">Recommended Path for KeyKeeper:</h3>
+            <h3 className="text-blue-300 font-semibold mb-2">Recommended Path for KlawKeeper:</h3>
             <ol className="list-decimal list-inside text-blue-200 space-y-2">
               <li>Use WebAuthn for YubiKey authentication (works today)</li>
               <li>Have users upload/provide their PGP public key separately</li>

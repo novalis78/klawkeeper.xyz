@@ -69,7 +69,7 @@ export async function POST(request) {
     try {
       const mxRecords = await resolveMx(domainName);
       results.mx = mxRecords.some(mx =>
-        mx.exchange.toLowerCase().includes('keykeeper.world')
+        mx.exchange.toLowerCase().includes('klawkeeper.xyz')
       );
     } catch (e) {
       console.log(`[DNS Verify] MX lookup failed for ${domainName}:`, e.message);
@@ -80,7 +80,7 @@ export async function POST(request) {
       const txtRecords = await resolveTxt(domainName);
       const flatRecords = txtRecords.flat();
       results.spf = flatRecords.some(txt =>
-        txt.includes('include:keykeeper.world')
+        txt.includes('include:klawkeeper.xyz')
       );
     } catch (e) {
       console.log(`[DNS Verify] TXT lookup failed for ${domainName}:`, e.message);

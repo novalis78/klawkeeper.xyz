@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic';
 /**
  * AI Services Discovery Endpoint
  *
- * This endpoint provides AI agents with information about KeyKeeper's
+ * This endpoint provides AI agents with information about KlawKeeper's
  * email infrastructure services, including:
  * - Available APIs (REST and MCP)
  * - Authentication methods
@@ -13,11 +13,11 @@ export const dynamic = 'force-dynamic';
  * - Service capabilities
  */
 export async function GET(request) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://keykeeper.world';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://klawkeeper.xyz';
   const apiUrl = `${baseUrl}/api`;
 
   const serviceInfo = {
-    name: 'KeyKeeper Email Infrastructure',
+    name: 'KlawKeeper Email Infrastructure',
     description: 'AI-first email service with autonomous registration, crypto payments, and full send/receive capabilities',
     version: '1.0.0',
     homepage: `${baseUrl}/ai`,
@@ -88,7 +88,7 @@ export async function GET(request) {
       },
       mcp: {
         available: true,
-        endpoint: 'mcp://keykeeper.world',
+        endpoint: 'mcp://klawkeeper.xyz',
         version: '1.0',
         description: 'Model Context Protocol server for seamless agent integration',
         tools: [
@@ -173,15 +173,15 @@ export async function GET(request) {
     // Support and contact
     support: {
       documentation: `${baseUrl}/docs/api`,
-      apiStatus: 'https://status.keykeeper.world',
-      email: 'support@keykeeper.world',
-      github: 'https://github.com/novalis78/keykeeper.world'
+      apiStatus: 'https://status.klawkeeper.xyz',
+      email: 'support@klawkeeper.xyz',
+      github: 'https://github.com/novalis78/klawkeeper.xyz'
     },
 
     // Discovery metadata
     _metadata: {
       lastUpdated: new Date().toISOString(),
-      schema: 'https://keykeeper.world/schemas/ai-services-v1.json',
+      schema: 'https://klawkeeper.xyz/schemas/ai-services-v1.json',
       compatibleAgents: [
         'claude-mcp',
         'openai-gpt',

@@ -23,8 +23,8 @@ export async function generateEmailEncryptionKeys(email, name = null) {
     // Generate mock PGP keys for now (real PGP requires Node.js 18+)
     const mockKeyId = crypto.randomBytes(8).toString('hex').toUpperCase();
     const mockFingerprint = crypto.randomBytes(20).toString('hex').toUpperCase();
-    const mockPublicKey = `-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: KeyKeeper Mock\n\n${mockFingerprint}\n-----END PGP PUBLIC KEY BLOCK-----`;
-    const mockPrivateKey = `-----BEGIN PGP PRIVATE KEY BLOCK-----\nVersion: KeyKeeper Mock\n\n${mockFingerprint}\n-----END PGP PRIVATE KEY BLOCK-----`;
+    const mockPublicKey = `-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: KlawKeeper Mock\n\n${mockFingerprint}\n-----END PGP PUBLIC KEY BLOCK-----`;
+    const mockPrivateKey = `-----BEGIN PGP PRIVATE KEY BLOCK-----\nVersion: KlawKeeper Mock\n\n${mockFingerprint}\n-----END PGP PRIVATE KEY BLOCK-----`;
     
     return {
       publicKey: mockPublicKey,

@@ -76,7 +76,7 @@ export async function POST(request) {
     
     // TODO: Send actual email with reset link
     // For now, return the token for development/testing
-    const resetLink = `${process.env.NEXT_PUBLIC_APP_URL || 'https://keykeeper.world'}/reset-password?token=${resetToken}&id=${user.id}`;
+    const resetLink = `${process.env.NEXT_PUBLIC_APP_URL || 'https://klawkeeper.xyz'}/reset-password?token=${resetToken}&id=${user.id}`;
     
     console.log(`Password reset requested for ${email}`);
     console.log(`Reset link: ${resetLink}`);

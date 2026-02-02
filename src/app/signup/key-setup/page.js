@@ -189,7 +189,7 @@ export default function KeySetupPage() {
         Choose Your Security Method
       </h2>
       <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
-        Select how you want to secure your KeyKeeper account
+        Select how you want to secure your KlawKeeper account
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -247,7 +247,7 @@ export default function KeySetupPage() {
               Use Existing Key
             </h3>
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-              Already have a PGP key? Use it with KeyKeeper for a seamless experience.
+              Already have a PGP key? Use it with KlawKeeper for a seamless experience.
             </p>
             <div className="mt-4 text-xs text-gray-400 dark:text-gray-500">
               Best for PGP enthusiasts
@@ -325,7 +325,7 @@ export default function KeySetupPage() {
             <li>Your public key will be used to encrypt emails sent to you</li>
             <li>Your private key will never leave your device</li>
             <li>We'll help you securely back up your private key</li>
-            <li>You'll need your private key to sign in to KeyKeeper</li>
+            <li>You'll need your private key to sign in to KlawKeeper</li>
           </ul>
         </div>
       </div>
@@ -398,7 +398,7 @@ export default function KeySetupPage() {
           </h3>
           <ul className="list-disc pl-5 text-xs text-blue-700 dark:text-blue-400 space-y-1">
             <li>Your YubiKey stores your private key securely</li>
-            <li>You'll need your YubiKey to sign in to KeyKeeper</li>
+            <li>You'll need your YubiKey to sign in to KlawKeeper</li>
             <li>The private key never leaves your YubiKey device</li>
             <li>This provides the highest level of security for your email</li>
           </ul>
@@ -605,13 +605,13 @@ export default function KeySetupPage() {
       {/* Logo and brand */}
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link href="/" className="flex justify-center">
-          <span className="sr-only">KeyKeeper</span>
+          <span className="sr-only">KlawKeeper</span>
           <div className="h-20 w-20 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 flex items-center justify-center shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 transition-all duration-300">
             <LockClosedIcon className="h-10 w-10 text-white" />
           </div>
         </Link>
         <h1 className="mt-6 text-center text-5xl font-extrabold text-white">
-          KeyKeeper<span className="text-primary-400">.world</span>
+          KlawKeeper<span className="text-primary-400">.world</span>
         </h1>
       </div>
 

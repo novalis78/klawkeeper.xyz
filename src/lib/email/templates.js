@@ -6,7 +6,7 @@
 export const EMAIL_TEMPLATES = {
   default: {
     id: 'default',
-    name: 'KeyKeeper Classic',
+    name: 'KlawKeeper Classic',
     description: 'Clean and professional',
     colors: {
       background: '#ffffff',
@@ -242,13 +242,13 @@ export function generateEmailHTML(template, { subject, body, senderName, senderE
                 <tr>
                   <td style="text-align: left;">
                     <p style="margin: 0 0 8px; font-size: 13px; color: ${c.footerText};">
-                      <strong style="color: ${c.accent};">KeyKeeper</strong> Secure Email
+                      <strong style="color: ${c.accent};">KlawKeeper</strong> Secure Email
                     </p>
                     <p style="margin: 0 0 4px; font-size: 12px; color: ${c.footerText};">
                       Sent by ${escapeHtml(senderName)} &lt;${senderEmail}&gt;
                     </p>
                     <p style="margin: 0; font-size: 11px; color: ${c.footerText};">
-                      Sent securely with <a href="https://keykeeper.world" style="color: ${c.link}; text-decoration: none;">KeyKeeper</a>
+                      Sent securely with <a href="https://klawkeeper.xyz" style="color: ${c.link}; text-decoration: none;">KlawKeeper</a>
                     </p>
                   </td>
                 </tr>

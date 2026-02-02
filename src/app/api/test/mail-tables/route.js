@@ -113,7 +113,7 @@ export async function GET(request) {
 
         if (domains.length === 0) {
           results.tests.virtualDomainsTable.warning = 'No domains configured';
-          results.tests.virtualDomainsTable.action = 'INSERT INTO virtual_domains (name) VALUES (\'keykeeper.world\')';
+          results.tests.virtualDomainsTable.action = 'INSERT INTO virtual_domains (name) VALUES (\'klawkeeper.xyz\')';
         }
       }
 

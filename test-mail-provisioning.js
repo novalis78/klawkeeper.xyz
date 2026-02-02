@@ -48,9 +48,9 @@ async function testMailProvisioning() {
     console.log(`✅ virtual_domains table exists with ${domains.length} domain(s)`);
 
     if (domains.length === 0) {
-      console.log('⚠️  No domains found. Adding keykeeper.world...');
-      await connection.query("INSERT INTO virtual_domains (name) VALUES ('keykeeper.world')");
-      console.log('✅ Added keykeeper.world domain\n');
+      console.log('⚠️  No domains found. Adding klawkeeper.xyz...');
+      await connection.query("INSERT INTO virtual_domains (name) VALUES ('klawkeeper.xyz')");
+      console.log('✅ Added klawkeeper.xyz domain\n');
     } else {
       console.log('Domains:', domains.map(d => d.name).join(', '));
       console.log();
@@ -60,7 +60,7 @@ async function testMailProvisioning() {
 
     // Test 3: Test mail account creation
     console.log('Test 3: Testing mail account creation...');
-    const testEmail = `test_${Date.now()}@keykeeper.world`;
+    const testEmail = `test_${Date.now()}@klawkeeper.xyz`;
     const testPassword = crypto.randomBytes(32).toString('hex');
     const testUserId = crypto.randomUUID();
 
@@ -97,7 +97,7 @@ async function testMailProvisioning() {
     console.log('Test 4: Testing getUserEmailByUserId...');
 
     // First, create a test account to query
-    const testEmail2 = `test2_${Date.now()}@keykeeper.world`;
+    const testEmail2 = `test2_${Date.now()}@klawkeeper.xyz`;
     const testPassword2 = crypto.randomBytes(32).toString('hex');
     const testUserId2 = crypto.randomUUID();
 

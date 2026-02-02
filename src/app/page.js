@@ -23,12 +23,12 @@ export default function NewHomePage() {
             <div className="relative">
               <img
                 src="/logo-small.png"
-                alt="KeyKeeper"
+                alt="KlawKeeper"
                 className="w-8 h-8 object-contain transition-all duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-teal-400/0 group-hover:bg-teal-400/20 rounded-lg blur-xl transition-all duration-300 -z-10"></div>
             </div>
-            <span className="group-hover:text-primary-300 transition-colors">KeyKeeper</span>
+            <span className="group-hover:text-primary-300 transition-colors">KlawKeeper</span>
           </Link>
 
           <div className="flex items-center gap-6">
@@ -577,12 +577,12 @@ export default function NewHomePage() {
             <div className="flex items-center gap-3">
               <img
                 src="/logo-small.png"
-                alt="KeyKeeper"
+                alt="KlawKeeper"
                 className="w-10 h-10 object-contain"
               />
               <div>
-                <div className="font-semibold text-white">KeyKeeper</div>
-                <div className="text-xs text-white/40">© 2025 KeyKeeper. Privacy first.</div>
+                <div className="font-semibold text-white">KlawKeeper</div>
+                <div className="text-xs text-white/40">© 2025 KlawKeeper. Privacy first.</div>
               </div>
             </div>
             <div className="flex gap-8 text-sm">

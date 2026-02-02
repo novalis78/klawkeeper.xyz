@@ -8,7 +8,7 @@ import { MultiChainPaymentService } from '@/lib/payment/MultiChainPaymentService
 /**
  * MCP (Model Context Protocol) Server
  *
- * Provides a standard interface for AI agents to interact with KeyKeeper's
+ * Provides a standard interface for AI agents to interact with KlawKeeper's
  * email infrastructure via the Model Context Protocol.
  *
  * GET  /api/mcp - Get server capabilities and tool definitions
@@ -343,7 +343,7 @@ async function registerAgent(args) {
 
   // Generate email address
   const randomSuffix = crypto.randomBytes(3).toString('hex');
-  const email = `agent-${agentId}-${randomSuffix}@keykeeper.world`;
+  const email = `agent-${agentId}-${randomSuffix}@klawkeeper.xyz`;
 
   // Generate API key
   const apiKey = `kk_${crypto.randomBytes(32).toString('hex')}`;
@@ -632,7 +632,7 @@ async function claimCredits(args) {
 
   // Case 2: Create new account
   const randomSuffix = crypto.randomBytes(3).toString('hex');
-  const email = `agent-${agentId || 'new'}-${randomSuffix}@keykeeper.world`;
+  const email = `agent-${agentId || 'new'}-${randomSuffix}@klawkeeper.xyz`;
   const newApiKey = `kk_${crypto.randomBytes(32).toString('hex')}`;
   const userId = crypto.randomUUID();
 

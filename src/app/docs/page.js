@@ -24,7 +24,7 @@ export default function DocsPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#050505]/80 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link href="/" className="text-sm font-medium">
-            KeyKeeper
+            KlawKeeper
           </Link>
 
           <div className="flex items-center gap-6">
@@ -52,7 +52,7 @@ export default function DocsPage() {
           >
             <h1 className="text-5xl font-bold mb-4">Documentation</h1>
             <p className="text-lg text-white/60">
-              Everything you need to integrate KeyKeeper into your applications
+              Everything you need to integrate KlawKeeper into your applications
             </p>
           </motion.div>
 

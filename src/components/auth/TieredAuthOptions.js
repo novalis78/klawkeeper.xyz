@@ -66,7 +66,7 @@ export default function TieredAuthOptions({ onOptionSelect }) {
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Choose Your Security Level</h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400">
-          Select how you'd like to secure your KeyKeeper account. Each option offers different levels of security and convenience.
+          Select how you'd like to secure your KlawKeeper account. Each option offers different levels of security and convenience.
         </p>
       </div>
       

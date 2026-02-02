@@ -88,7 +88,7 @@ function LoginForm() {
       if (data.mailPassword && data.user?.email) {
         try {
           const accountId = `account_${data.user.email.replace(/[^a-zA-Z0-9]/g, '_')}`;
-          const mailServer = process.env.NEXT_PUBLIC_MAIL_HOST || 'mail.keykeeper.world';
+          const mailServer = process.env.NEXT_PUBLIC_MAIL_HOST || 'mail.klawkeeper.xyz';
           
           const credentials = {
             email: data.user.email,
@@ -148,12 +148,12 @@ function LoginForm() {
                 <div className="relative">
                   <img
                     src="/logo-small.png"
-                    alt="KeyKeeper"
+                    alt="KlawKeeper"
                     className="w-10 h-10 object-contain transition-all duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-teal-400/0 group-hover:bg-teal-400/30 rounded-lg blur-xl transition-all duration-300 -z-10"></div>
                 </div>
-                <span className="text-xl font-semibold text-white group-hover:text-primary-300 transition-colors">KeyKeeper</span>
+                <span className="text-xl font-semibold text-white group-hover:text-primary-300 transition-colors">KlawKeeper</span>
               </div>
             </Link>
             <h1 className="text-[44px] font-semibold mb-3 text-white leading-[1.2] tracking-[-0.02em]">
@@ -193,7 +193,7 @@ function LoginForm() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full px-4 py-3 bg-white/[0.05] border border-white/10 rounded-xl text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-primary-500/50 focus:ring-2 focus:ring-primary-500/20 focus:bg-white/[0.08] transition-all backdrop-blur-xl shadow-inner"
-                    placeholder="you@keykeeper.world"
+                    placeholder="you@klawkeeper.xyz"
                   />
                 </div>
 
